@@ -4,15 +4,15 @@
 
 
 ## ROTAS
- - Login 
- - Game 
+ - Login ✅
+ - Game ✅
 
 
 ## TELA LOGIN
- - Campo de Nome 
- - Campo de Email 
- - Botão de Login 
- - Redirecionar para tela do jogo 
+ - Campo de Nome ✅
+ - Campo de Email ✅
+ - Botão de Login ✅
+ - Redirecionar para tela do jogo ✅
 
 
 ## EXTRA TELA LOGIN
@@ -29,12 +29,12 @@
 
 
 ## TELA DO PIXEL
-- Criar o Pixel 
-- Criar o Board 
-- Pintar o Pixel (cor preta) 
-- Gerar 04 Paletas de Cores (preto, vermelho, verde, azul) 
-- Selecionar a cor da Paleta 
-- Pintar o Pixel com a cor selecionada 
+- Criar o Pixel ✅
+- Criar o Board ✅
+- Pintar o Pixel (cor preta) ✅
+- Gerar 04 Paletas de Cores (preto, vermelho, verde, azul) ✅
+- Selecionar a cor da Paleta ✅
+- Pintar o Pixel com a cor selecionada ✅
 
 
 ## ESTRUTURA TELA DO PIXEL
@@ -45,7 +45,6 @@
 
 
 ## BÔNUS (Dever de Casa)
-
 - Tamanho do Board dinâmico
 - Gerar Paleta de Cores aleatória
 - Botão de limpar o board
