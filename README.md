@@ -4,18 +4,18 @@
 
 
 ## ROTAS
- - Login
- - Game
+ - Login ✅
+ - Game ✅
 
 
 ## TELA LOGIN
- - Campo de Nome
- - Campo de Email
- - Botão de Login
- - Desabilitar Botão
- - Validar Campos
- - Habilitar Botão
- - Redirecionar para tela do jogo
+ - Campo de Nome ✅
+ - Campo de Email ✅
+ - Botão de Login ✅
+ - Desabilitar Botão ✅
+ - Validar Campos ✅
+ - Habilitar Botão ✅
+ - Redirecionar para tela do jogo ✅
 
 
 ## ESTRUTURA TELA DO LOGIN
@@ -26,23 +26,22 @@
 
 
 ## TELA DO PIXEL
-- Criar Pixel
-- Criar Board
-- Pintar o Pixel (cor preta)
-- Gerar 04 Paletas de Cores (preto, vermelho, verde, azul)
-- Selecionar a cor da Paleta
-- Pintar o Pixel com a cor selecionada
+- Criar o Pixel ✅
+- Criar o Board ✅
+- Pintar o Pixel (cor preta) ✅
+- Gerar 04 Paletas de Cores (preto, vermelho, verde, azul) ✅
+- Selecionar a cor da Paleta ✅
+- Pintar o Pixel com a cor selecionada ✅
 
 
 ## ESTRUTURA TELA DO PIXEL
  - Game.jsx
     - ColorPalette.jsx
-    - Board.js
-        - Line.js
-            - Pixel.js
+    - Line.jsx
+        - Pixel.jsx
 
 
-## Bônus (Dever de Casa)
+## BÔNUS (Dever de Casa)
 
 - Tamanho do Board dinâmico
 - Gerar Paleta de Cores aleatória
