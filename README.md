@@ -1,6 +1,6 @@
 # PIXEL ART + REACT 🎨
 
-# FUNCIONALIDADES BABY STEPS 👶
+## FUNCIONALIDADES BABY STEPS 👶
 
 
 ## ROTAS
@@ -18,7 +18,7 @@
  - Redirecionar para tela do jogo
 
 
-### ESTRUTURA TELA DO LOGIN
+## ESTRUTURA TELA DO LOGIN
  - Login.jsx
     - Input.jsx
     - Input.js
@@ -34,7 +34,7 @@
 - Pintar o Pixel com a cor selecionada
 
 
-### ESTRUTURA TELA DO PIXEL
+## ESTRUTURA TELA DO PIXEL
  - Game.jsx
     - ColorPalette.jsx
     - Board.js
