@@ -12,10 +12,13 @@
  - Campo de Nome ✅
  - Campo de Email ✅
  - Botão de Login ✅
+ - Redirecionar para tela do jogo ✅
+
+
+## EXTRA TELA LOGIN
  - Desabilitar Botão ✅
  - Validar Campos ✅
  - Habilitar Botão ✅
- - Redirecionar para tela do jogo ✅
 
 
 ## ESTRUTURA TELA DO LOGIN
