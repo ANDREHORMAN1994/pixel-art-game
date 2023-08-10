@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 class Login extends Component {
   render() {
@@ -16,14 +17,20 @@ class Login extends Component {
         </label>
 
         <button
-          type='button'
+          type="button"
           onClick={ () => history.push('/game') }
         >
           Login
         </button>
       </div>
-    )
+    );
   }
 }
 
-export default Login
+Login.propTypes = {
+  history: propTypes.shape({
+    push: propTypes.func.isRequired,
+  }).isRequired,
+};
+
+export default Login;

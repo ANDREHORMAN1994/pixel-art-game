@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Pixel from './Pixel'
+import React, { Component } from 'react';
+import proptypes from 'prop-types';
+import Pixel from './Pixel';
 import './Line.css';
 
 class Line extends Component {
@@ -7,20 +8,25 @@ class Line extends Component {
     const { boardSize, brushColor } = this.props;
 
     return (
-      <div className='line' >
+      <div className="line">
         {
           boardSize.map((color, index) => (
             <Pixel
-              key={index}
-              color={color}
-              brushColor={brushColor}
+              key={ index }
+              color={ color }
+              brushColor={ brushColor }
               type="pixelBoard"
             />
           ))
         }
       </div>
-    )
+    );
   }
 }
 
-export default Line
+Line.propTypes = {
+  boardSize: proptypes.arrayOf(proptypes.string).isRequired,
+  brushColor: proptypes.string.isRequired,
+};
+
+export default Line;
