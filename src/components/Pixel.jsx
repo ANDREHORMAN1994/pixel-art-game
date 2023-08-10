@@ -40,8 +40,12 @@ class Pixel extends Component {
 Pixel.propTypes = {
   color: propTypes.string.isRequired,
   brushColor: propTypes.string.isRequired,
-  updateBrushColor: propTypes.func.isRequired,
+  updateBrushColor: propTypes.func,
   type: propTypes.string.isRequired,
+};
+
+Pixel.defaultProps = {
+  updateBrushColor: () => {},
 };
 
 export default Pixel;
