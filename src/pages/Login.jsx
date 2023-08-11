@@ -1,30 +1,59 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
+import { setUser } from '../redux/slices/user';
 
-class Login extends Component {
-  render() {
-    const { history } = this.props;
-    return (
-      <div>
-        <label htmlFor="name">
-          Escreva seu Nome
-          <input type="text" name="" id="name" />
-        </label>
+function Login() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
 
-        <label htmlFor="email">
-          Escreva seu Email
-          <input type="email" name="" id="email" />
-        </label>
+  const history = useHistory();
+  const dispatch = useDispatch();
 
-        <button
-          type="button"
-          onClick={ () => history.push('/game') }
-        >
-          Login
-        </button>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const handleValidation = () => {
+      const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+      const valEmail = emailRegex.test(email);
+      const valName = name.length > 0 && name.trim();
+      setIsDisabled(!(valEmail && valName));
+    };
+    handleValidation();
+  }, [name, email]);
+
+  const handleClick = () => {
+    dispatch(setUser({ name, email }));
+    history.push('/game');
+  };
+
+  return (
+    <div>
+      <label htmlFor="name">
+        Escreva seu Nome
+        <input
+          type="text"
+          onChange={ ({ target: { value } }) => setName(value) }
+        />
+      </label>
+
+      <label htmlFor="email">
+        Escreva seu Email
+        <input
+          type="email"
+          onChange={ ({ target: { value } }) => setEmail(value) }
+        />
+      </label>
+
+      <button
+        type="button"
+        onClick={ handleClick }
+        disabled={ isDisabled }
+      >
+        Login
+      </button>
+    </div>
+  );
 }
 
 Login.propTypes = {
