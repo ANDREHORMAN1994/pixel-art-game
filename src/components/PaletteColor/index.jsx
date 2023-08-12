@@ -13,6 +13,7 @@ function PaletteColor({ updateBrushColor }) {
         palleteSize.map((color, index) => (
           <Pixel
             key={ index }
+            idPixel={ `${index}` }
             color={ color }
             brushColor={ color }
             updateBrushColor={ updateBrushColor }

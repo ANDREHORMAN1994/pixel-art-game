@@ -2,16 +2,17 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Pixel from '../Pixel';
 
-function Challenger({ formatDraw }) {
+function Challenger({ challenge }) {
   return (
     <div>
       <h1>Challenger</h1>
       {
-        formatDraw().map((line, index) => (
+        challenge.draw.map((line, index) => (
           <div className="line" key={ index }>
             {line.map((pixel) => (
               <Pixel
                 key={ pixel.id }
+                idPixel={ `${index}` }
                 color={ pixel.color }
                 type="draw"
               />
@@ -24,7 +25,12 @@ function Challenger({ formatDraw }) {
 }
 
 Challenger.propTypes = {
-  formatDraw: propTypes.func.isRequired,
+  challenge: propTypes.shape({
+    draw: propTypes.arrayOf(propTypes.arrayOf(propTypes.shape({
+      id: propTypes.string,
+      color: propTypes.string,
+    }))),
+  }).isRequired,
 };
 
 export default Challenger;

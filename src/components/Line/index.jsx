@@ -9,7 +9,7 @@ function Line({ idLine, boardSize, brushColor }) {
       {
         boardSize.map((color, index) => (
           <Pixel
-            key={ index }
+            key={ `${idLine}${index}` }
             idPixel={ `${idLine}${index}` }
             color={ color }
             brushColor={ brushColor }
