@@ -11,7 +11,6 @@ const LAST_INDEX = -1;
 
 function App() {
   const dispatch = useDispatch();
-  console.log('App');
 
   useEffect(() => {
     const localRanking = readLocalStorage('pixelRanking') || [];

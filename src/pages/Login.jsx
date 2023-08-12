@@ -22,13 +22,14 @@ function Login() {
     handleValidation();
   }, [name, email]);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     dispatch(setUser({ name, email }));
     history.push('/game');
   };
 
   return (
-    <div>
+    <form onSubmit={ handleClick }>
       <label htmlFor="name">
         Escreva seu Nome
         <input
@@ -46,13 +47,12 @@ function Login() {
       </label>
 
       <button
-        type="button"
-        onClick={ handleClick }
+        type="submit"
         disabled={ isDisabled }
       >
         Login
       </button>
-    </div>
+    </form>
   );
 }
 

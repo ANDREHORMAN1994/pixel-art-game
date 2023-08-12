@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import proptypes from 'prop-types';
 import Pixel from '../Pixel';
 
-const INITIAL_COLORS = ['black', 'red', 'green', 'blue'];
+const INITIAL_COLORS = ['white', 'black', 'red', 'green', 'blue', 'yellow'];
 
 function PaletteColor({ updateBrushColor }) {
   const [palleteSize, setPalleteSize] = useState(INITIAL_COLORS);

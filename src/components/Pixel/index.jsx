@@ -4,12 +4,17 @@ import { useDispatch } from 'react-redux';
 import { incrementPixelColor } from '../../redux/slices/game';
 import './Pixel.css';
 
-function Pixel({ idPixel, color, brushColor, updateBrushColor = () => {}, type }) {
+function Pixel({
+  idPixel = 0,
+  color = 'white',
+  brushColor = 'black',
+  updateBrushColor = () => {},
+  type }) {
   const dispatch = useDispatch();
   const [pixelColor, setPixelColor] = useState(color);
 
   useEffect(() => {
-    if (type === 'pixelBoard') {
+    if (type === 'pixelBoard' && idPixel) {
       dispatch(incrementPixelColor({
         id: idPixel,
         color: pixelColor,
@@ -29,9 +34,9 @@ function Pixel({ idPixel, color, brushColor, updateBrushColor = () => {}, type }
 }
 
 Pixel.propTypes = {
-  idPixel: propTypes.string.isRequired,
+  idPixel: propTypes.string,
   color: propTypes.string.isRequired,
-  brushColor: propTypes.string.isRequired,
+  brushColor: propTypes.string,
   updateBrushColor: propTypes.func,
   type: propTypes.string.isRequired,
 };
