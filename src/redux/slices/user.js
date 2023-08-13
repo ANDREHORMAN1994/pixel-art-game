@@ -5,19 +5,24 @@ const INITIAL_STATE = {
   email: '',
   imgGravatar: 'https://www.gravatar.com/avatar/',
   score: 0,
+  assertions: 0,
 };
 
 const userSlice = createSlice({
   name: 'user',
   initialState: INITIAL_STATE,
   reducers: {
-    setUser: (state, action) => {
-      const { name, email } = action.payload;
-      return { ...state, name, email };
-    },
+    setUser: (state, { payload }) => ({
+      ...state,
+      ...payload,
+    }),
+    setScore: (state, { payload }) => ({
+      ...state,
+      score: state.score + payload,
+    }),
   },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, setScore } = userSlice.actions;
 
 export default userSlice.reducer;

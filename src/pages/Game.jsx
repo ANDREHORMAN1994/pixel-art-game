@@ -1,22 +1,41 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
+import { setScore } from '../redux/slices/user';
 import Line from '../components/Line';
 import PaletteColor from '../components/PaletteColor';
 import Header from '../components/Header';
 import Challenger from '../components/Challenger';
 import draws from '../utils/draws';
+import Timer from '../components/Timer';
+
+const POINT_DEFAULT = 10;
 
 function Game() {
-  const { pixelColors } = useSelector(({ game }) => game);
+  const dispatch = useDispatch();
+  const { pixelColors, currentTimer } = useSelector(({ game }) => game);
   const [isLoading, setIsLoading] = useState(true);
+  const [showButton, setShowButton] = useState(false);
   const [indexDraw, setIndexDraw] = useState(0);
   const [valueSize, setValueSize] = useState(0);
   const [challenge, setChallenge] = useState({});
+  const [stopTimer, setStopTimer] = useState(false);
   const [state, setState] = useState({
     boardSize: new Array(valueSize).fill('white'),
     brushColor: 'black',
   });
+
+  const calculateScore = useCallback(() => {
+    const difficultyValues = {
+      easy: 1,
+      medium: 2,
+      hard: 3,
+    };
+    const result = POINT_DEFAULT + (
+      currentTimer * difficultyValues[challenge.difficulty]
+    );
+    dispatch(setScore(result));
+  }, [challenge.difficulty, currentTimer, dispatch]);
 
   const updateBrushColor = (newColor) => {
     setState({
@@ -28,11 +47,16 @@ function Game() {
   const nextDraw = useCallback(() => {
     setIndexDraw(indexDraw + 1);
     setIsLoading(true);
+    setStopTimer(false);
+    setShowButton(false);
   }, [indexDraw]);
 
   useEffect(() => {
     const showAlert = (result) => {
       if (result) {
+        calculateScore();
+        setStopTimer(true);
+        setShowButton(true);
         Swal.fire(
           'Parabéns!',
           'Você acertou!!',
@@ -53,7 +77,7 @@ function Game() {
       }
     };
     verifyResult();
-  }, [indexDraw, pixelColors]);
+  }, [calculateScore, indexDraw, pixelColors]);
 
   useEffect(() => {
     const formatDraw = () => {
@@ -106,10 +130,15 @@ function Game() {
         ))}
       </div>
 
-      <button type="button" onClick={ nextDraw }>Próximo Desafio</button>
+      {showButton && (
+        <button type="button" onClick={ nextDraw }>Próximo Desafio</button>
+      )}
 
       {isLoading ? <h1>Loading...</h1> : (
-        <Challenger key={ challenge.drawId } challenge={ challenge } />
+        <div>
+          <Timer setShowButton={ setShowButton } stopTimer={ stopTimer } />
+          <Challenger key={ challenge.drawId } challenge={ challenge } />
+        </div>
       )}
     </div>
   );

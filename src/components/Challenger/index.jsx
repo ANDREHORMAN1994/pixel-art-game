@@ -2,12 +2,12 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Pixel from '../Pixel';
 
-function Challenger({ challenge }) {
+function Challenger({ challenge: { name, draw } }) {
   return (
     <div>
-      <h1>Challenger</h1>
+      <h1>{`Challenger ${name}`}</h1>
       {
-        challenge.draw.map((line, index) => (
+        draw.map((line, index) => (
           <div className="line" key={ index }>
             {line.map((pixel) => (
               <Pixel
@@ -30,6 +30,7 @@ Challenger.propTypes = {
       id: propTypes.string,
       color: propTypes.string,
     }))),
+    name: propTypes.string,
   }).isRequired,
 };
 

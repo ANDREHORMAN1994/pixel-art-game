@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setUser } from './redux/slices/user';
+import { setUser, setScore } from './redux/slices/user';
 import './App.css';
 import Login from './pages/Login';
 import Game from './pages/Game';
@@ -16,7 +16,9 @@ function App() {
     const localRanking = readLocalStorage('pixelRanking') || [];
     const userInfos = localRanking.at(LAST_INDEX);
     if (userInfos) {
-      dispatch(setUser(userInfos));
+      const { name, email, imgGravatar, score } = userInfos;
+      dispatch(setUser({ name, email, imgGravatar }));
+      dispatch(setScore(score));
     }
   }, [dispatch]);
 
