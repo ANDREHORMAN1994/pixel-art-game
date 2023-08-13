@@ -3,12 +3,12 @@ import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { updateTimer } from '../../redux/slices/game';
 
-const INITIAL_TIMER = 5;
+const INITIAL_TIMER = 60;
 const INTERVAL_SEC = 1000;
 
 let interval;
 
-function Timer({ setShowButton, stopTimer }) {
+function Timer({ setShowButton, stopTimer, setStopTimer }) {
   const dispatch = useDispatch();
   const [timer, setTimer] = useState(INITIAL_TIMER);
 
@@ -25,8 +25,9 @@ function Timer({ setShowButton, stopTimer }) {
     if (timer === 0) {
       clearInterval(interval);
       setShowButton(true);
+      setStopTimer(true);
     }
-  }, [dispatch, setShowButton, stopTimer, timer]);
+  }, [dispatch, setShowButton, setStopTimer, stopTimer, timer]);
 
   return (
     <h3>{timer}</h3>
@@ -35,6 +36,7 @@ function Timer({ setShowButton, stopTimer }) {
 
 Timer.propTypes = {
   setShowButton: propTypes.func.isRequired,
+  setStopTimer: propTypes.func.isRequired,
   stopTimer: propTypes.bool.isRequired,
 };
 

@@ -1,18 +1,20 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
-import { setScore } from '../redux/slices/user';
-import Line from '../components/Line';
-import PaletteColor from '../components/PaletteColor';
-import Header from '../components/Header';
-import Challenger from '../components/Challenger';
-import draws from '../utils/draws';
-import Timer from '../components/Timer';
+import { useHistory } from 'react-router-dom';
+import { setScore, setAssertions } from '../../redux/slices/user';
+import Line from '../../components/Line';
+import PaletteColor from '../../components/PaletteColor';
+import Header from '../../components/Header';
+import Challenger from '../../components/Challenger';
+import draws from '../../utils/draws';
+import Timer from '../../components/Timer';
 
 const POINT_DEFAULT = 10;
 
 function Game() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { pixelColors, currentTimer } = useSelector(({ game }) => game);
   const [isLoading, setIsLoading] = useState(true);
   const [showButton, setShowButton] = useState(false);
@@ -25,6 +27,13 @@ function Game() {
     brushColor: 'black',
   });
 
+  const updateBrushColor = (newColor) => {
+    setState({
+      ...state,
+      brushColor: newColor,
+    });
+  };
+
   const calculateScore = useCallback(() => {
     const difficultyValues = {
       easy: 1,
@@ -35,21 +44,19 @@ function Game() {
       currentTimer * difficultyValues[challenge.difficulty]
     );
     dispatch(setScore(result));
+    dispatch(setAssertions());
   }, [challenge.difficulty, currentTimer, dispatch]);
 
-  const updateBrushColor = (newColor) => {
-    setState({
-      ...state,
-      brushColor: newColor,
-    });
-  };
-
   const nextDraw = useCallback(() => {
-    setIndexDraw(indexDraw + 1);
-    setIsLoading(true);
-    setStopTimer(false);
-    setShowButton(false);
-  }, [indexDraw]);
+    if (indexDraw + 1 === draws.length) {
+      history.push('/ranking');
+    } else {
+      setIndexDraw(indexDraw + 1);
+      setIsLoading(true);
+      setStopTimer(false);
+      setShowButton(false);
+    }
+  }, [history, indexDraw]);
 
   useEffect(() => {
     const showAlert = (result) => {
@@ -126,6 +133,7 @@ function Game() {
             idLine={ `${index}` }
             boardSize={ boardSize }
             brushColor={ brushColor }
+            stopTimer={ stopTimer }
           />
         ))}
       </div>
@@ -136,7 +144,11 @@ function Game() {
 
       {isLoading ? <h1>Loading...</h1> : (
         <div>
-          <Timer setShowButton={ setShowButton } stopTimer={ stopTimer } />
+          <Timer
+            setShowButton={ setShowButton }
+            stopTimer={ stopTimer }
+            setStopTimer={ setStopTimer }
+          />
           <Challenger key={ challenge.drawId } challenge={ challenge } />
         </div>
       )}

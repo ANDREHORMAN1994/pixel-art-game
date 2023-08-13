@@ -7,7 +7,7 @@ const GRAVATAR_URL = 'https://www.gravatar.com/avatar/';
 
 function Header() {
   const [gravatarImg, setGravatarImg] = React.useState(GRAVATAR_URL);
-  const { name, email, score } = useSelector((state) => state.user);
+  const { name, email, score, assertions } = useSelector((state) => state.user);
 
   useEffect(() => {
     if (email) {
@@ -16,10 +16,10 @@ function Header() {
       setGravatarImg(imgGravatar);
       writeLocalStorage(
         'pixelRanking',
-        { name, email, imgGravatar, score },
+        { name, email, imgGravatar, score, assertions },
       );
     }
-  }, [email, name, score]);
+  }, [assertions, email, name, score]);
 
   return (
     <div>

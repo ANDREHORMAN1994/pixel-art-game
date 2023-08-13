@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
-import { setUser } from '../redux/slices/user';
+import { setUser } from '../../redux/slices/user';
 
 function Login() {
   const [name, setName] = useState('');

@@ -9,13 +9,20 @@ function Pixel({
   color = 'white',
   brushColor = 'black',
   updateBrushColor = () => {},
+  stopTimer = false,
   type }) {
   const dispatch = useDispatch();
   const [pixelColor, setPixelColor] = useState(color);
 
+  const changePixelColor = () => {
+    if (!stopTimer) {
+      setPixelColor(brushColor);
+    }
+  };
+
   useEffect(() => {
     const updatePixelColor = () => {
-      if (type === 'pixelBoard' && idPixel) {
+      if (type === 'pixelBoard' && idPixel && !stopTimer) {
         dispatch(incrementPixelColor({
           id: idPixel,
           color: pixelColor,
@@ -23,14 +30,14 @@ function Pixel({
       }
     };
     updatePixelColor();
-  }, [dispatch, idPixel, pixelColor, type]);
+  }, [dispatch, idPixel, pixelColor, stopTimer, type]);
 
   return (
     <div
       className="pixel"
       style={ { backgroundColor: pixelColor } }
       onClick={ () => (type === 'pixelBoard'
-        ? setPixelColor(brushColor)
+        ? changePixelColor()
         : updateBrushColor(pixelColor)) }
     />
   );
@@ -41,6 +48,7 @@ Pixel.propTypes = {
   color: propTypes.string.isRequired,
   brushColor: propTypes.string,
   updateBrushColor: propTypes.func,
+  stopTimer: propTypes.bool,
   type: propTypes.string.isRequired,
 };
 
