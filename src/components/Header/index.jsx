@@ -1,25 +1,30 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { MD5 } from 'crypto-js';
+import { setUser } from '../../redux/slices/user';
 import { writeLocalStorage } from '../../utils/localStorage';
 
 const GRAVATAR_URL = 'https://www.gravatar.com/avatar/';
 
 function Header() {
   const [gravatarImg, setGravatarImg] = React.useState(GRAVATAR_URL);
+
   const { name, email, score, assertions } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (email) {
       const hash = MD5(email).toString();
       const imgGravatar = `${GRAVATAR_URL}${hash}`;
       setGravatarImg(imgGravatar);
+      const userInfos = { name, email, imgGravatar, score, assertions };
+      dispatch(setUser({ imgGravatar }));
       writeLocalStorage(
         'pixelRanking',
-        { name, email, imgGravatar, score, assertions },
+        userInfos,
       );
     }
-  }, [assertions, email, name, score]);
+  }, [assertions, dispatch, email, name, score]);
 
   return (
     <div>

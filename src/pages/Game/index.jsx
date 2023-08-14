@@ -5,10 +5,10 @@ import { useHistory } from 'react-router-dom';
 import { setScore, setAssertions } from '../../redux/slices/user';
 import Line from '../../components/Line';
 import PaletteColor from '../../components/PaletteColor';
-import Header from '../../components/Header';
 import Challenger from '../../components/Challenger';
 import draws from '../../utils/draws';
 import Timer from '../../components/Timer';
+import Header from '../../components/Header';
 
 const POINT_DEFAULT = 10;
 

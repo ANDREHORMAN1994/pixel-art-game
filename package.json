@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "eslint": "npx stylelint '**/*.css' --fix",
+    "stylelint": "npx stylelint '**/*.css' --fix",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import propTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/slices/user';
 
 function Login() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+  const [redirect, setRedirect] = useState(false);
 
-  const history = useHistory();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,8 +25,10 @@ function Login() {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(setUser({ name, email }));
-    history.push('/game');
+    setRedirect(true);
   };
+
+  if (redirect) return (<Redirect to="/game" />);
 
   return (
     <form onSubmit={ handleClick }>
