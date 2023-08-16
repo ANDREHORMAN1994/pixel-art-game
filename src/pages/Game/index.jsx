@@ -44,7 +44,7 @@ function Game() {
 
   return (
     <div>
-      <PaletteColor updateBrushColor={ updateBrushColor } />
+      <PaletteColor updateBrushColor={ updateBrushColor } screen="game" />
       <p>{`Tamanho atual do quadro: ${valueSize * valueSize} pixels`}</p>
       <input
         type="number"

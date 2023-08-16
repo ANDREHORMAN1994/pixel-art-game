@@ -125,7 +125,7 @@ function ChallengerGame() {
   return (
     <div>
       <Header />
-      <PaletteColor updateBrushColor={ updateBrushColor } />
+      <PaletteColor updateBrushColor={ updateBrushColor } screen="challenger" />
       <div>
         {boardSize.map((_, index) => (
           <Line
@@ -152,6 +152,8 @@ function ChallengerGame() {
           <Challenger key={ challenge.drawId } challenge={ challenge } />
         </div>
       )}
+
+      <button type="button" onClick={ () => history.push('/home') }>Home 🏠</button>
     </div>
   );
 }

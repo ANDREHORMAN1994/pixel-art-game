@@ -6,7 +6,7 @@ const INITIAL_COLORS = ['white', 'black', 'red', 'green', 'blue', 'yellow'];
 const HEX_LENGTH = 6;
 const HEX_BASE = 16;
 
-function PaletteColor({ updateBrushColor }) {
+function PaletteColor({ updateBrushColor, screen }) {
   const [palleteSize, setPalleteSize] = useState(INITIAL_COLORS);
   const [idPallete, setIdPallete] = useState(0);
 
@@ -47,13 +47,18 @@ function PaletteColor({ updateBrushColor }) {
           ))
         }
       </div>
-      <button type="button" onClick={ generateListColors }>Gerar novas cores</button>
+      {
+        screen === 'game' && (
+          <button type="button" onClick={ generateListColors }>Gerar novas cores</button>
+        )
+      }
     </>
   );
 }
 
 PaletteColor.propTypes = {
   updateBrushColor: proptypes.func.isRequired,
+  screen: proptypes.string.isRequired,
 };
 
 export default PaletteColor;
