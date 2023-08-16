@@ -1,27 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Swal from 'sweetalert2';
 import { useHistory } from 'react-router-dom';
-import { setScore, setAssertions } from '../../redux/slices/user';
 import Line from '../../components/Line';
 import PaletteColor from '../../components/PaletteColor';
-import Challenger from '../../components/Challenger';
-import draws from '../../utils/draws';
-import Timer from '../../components/Timer';
-import Header from '../../components/Header';
 
-const POINT_DEFAULT = 10;
+const INITIAL_SIZE = 10;
 
 function Game() {
-  const dispatch = useDispatch();
   const history = useHistory();
-  const { pixelColors, currentTimer } = useSelector(({ game }) => game);
-  const [isLoading, setIsLoading] = useState(true);
-  const [showButton, setShowButton] = useState(false);
-  const [indexDraw, setIndexDraw] = useState(0);
-  const [valueSize, setValueSize] = useState(0);
-  const [challenge, setChallenge] = useState({});
-  const [stopTimer, setStopTimer] = useState(false);
+  const [valueSize, setValueSize] = useState(INITIAL_SIZE);
+  const [idBoard, setIdBoard] = useState(0);
   const [state, setState] = useState({
     boardSize: new Array(valueSize).fill('white'),
     brushColor: 'black',
@@ -32,126 +19,51 @@ function Game() {
       ...state,
       brushColor: newColor,
     });
+    console.log(newColor);
   };
 
-  const calculateScore = useCallback(() => {
-    const difficultyValues = {
-      easy: 1,
-      medium: 2,
-      hard: 3,
-    };
-    const result = POINT_DEFAULT + (
-      currentTimer * difficultyValues[challenge.difficulty]
-    );
-    dispatch(setScore(result));
-    dispatch(setAssertions());
-  }, [challenge.difficulty, currentTimer, dispatch]);
+  const clearBoard = useCallback(() => {
+    setIdBoard((prev) => prev + 1);
+  }, []);
 
-  const nextDraw = useCallback(() => {
-    if (indexDraw + 1 === draws.length) {
-      history.push('/ranking');
-    } else {
-      setIndexDraw(indexDraw + 1);
-      setIsLoading(true);
-      setStopTimer(false);
-      setShowButton(false);
+  const updateBoardSize = useCallback(() => {
+    if (valueSize) {
+      setState((prevState) => ({
+        ...prevState,
+        boardSize: new Array(valueSize).fill('white'),
+      }));
+      clearBoard();
     }
-  }, [history, indexDraw]);
+  }, [clearBoard, valueSize]);
 
   useEffect(() => {
-    const showAlert = (result) => {
-      if (result) {
-        calculateScore();
-        setStopTimer(true);
-        setShowButton(true);
-        Swal.fire(
-          'Parabéns!',
-          'Você acertou!!',
-          'success',
-        );
-      }
-    };
-    const verifyResult = () => {
-      if (pixelColors.length > 0) {
-        const { draw } = draws[indexDraw];
-        const result = draw.every((p, index) => {
-          const pixel = pixelColors[index];
-          if (!pixel) return false;
-          if (!p) return false;
-          return (p.id === pixel.id && p.color === pixel.color);
-        });
-        showAlert(result);
-      }
-    };
-    verifyResult();
-  }, [calculateScore, indexDraw, pixelColors]);
-
-  useEffect(() => {
-    const formatDraw = () => {
-      const currentDraw = draws[indexDraw];
-      const { draw, pixelSize } = currentDraw;
-      setValueSize(pixelSize);
-
-      const newDraw = state.boardSize.map((_, index) => {
-        const line = [];
-        draw.forEach((d) => {
-          const lineId = d.id.length > 2 ? d.id.substring(0, 2) : d.id[0];
-          const verifyLineId = +lineId > index ? +lineId[0] === index : +lineId === index;
-          if (verifyLineId && line.length < pixelSize) line.push(d);
-        });
-        return line;
-      });
-
-      setChallenge({ ...currentDraw, draw: newDraw });
-      setIsLoading(false);
-    };
-    formatDraw();
-  }, [indexDraw, state.boardSize]);
-
-  useEffect(() => {
-    const updateBoardSize = () => {
-      if (valueSize) {
-        setState((prevState) => ({
-          ...prevState,
-          boardSize: new Array(valueSize).fill('white'),
-        }));
-      }
-    };
     updateBoardSize();
-  }, [valueSize]);
+  }, [updateBoardSize, valueSize]);
 
   const { boardSize, brushColor } = state;
 
   return (
     <div>
-      <Header />
       <PaletteColor updateBrushColor={ updateBrushColor } />
-      <div>
+      <p>{`Tamanho atual do quadro: ${valueSize * valueSize} pixels`}</p>
+      <input
+        type="number"
+        placeholder="Digite um número inteiro 🖌️"
+        onChange={ ({ target: { value } }) => setValueSize(Number(value)) }
+      />
+      <div key={ idBoard }>
         {boardSize.map((_, index) => (
           <Line
             key={ `${index}` }
             idLine={ `${index}` }
             boardSize={ boardSize }
             brushColor={ brushColor }
-            stopTimer={ stopTimer }
           />
         ))}
       </div>
 
-      {showButton && (
-        <button type="button" onClick={ nextDraw }>Próximo Desafio</button>
-      )}
-
-      {isLoading ? <h1>Loading...</h1> : (
-        <div>
-          <Timer
-            setShowButton={ setShowButton }
-            stopTimer={ stopTimer }
-            setStopTimer={ setStopTimer }
-          />
-          <Challenger key={ challenge.drawId } challenge={ challenge } />
-        </div>
-      )}
+      <button type="button" onClick={ clearBoard }>Limpar quadro 🖼️</button>
+      <button type="button" onClick={ () => history.push('/home') }>Home 🏠</button>
     </div>
   );
 }

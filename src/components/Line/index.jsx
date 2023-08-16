@@ -3,7 +3,7 @@ import proptypes from 'prop-types';
 import Pixel from '../Pixel';
 import './Line.css';
 
-function Line({ idLine, boardSize, brushColor, stopTimer }) {
+function Line({ idLine, boardSize, brushColor, stopTimer = false }) {
   return (
     <div className="line">
       {
@@ -26,7 +26,7 @@ Line.propTypes = {
   idLine: proptypes.string.isRequired,
   boardSize: proptypes.arrayOf(proptypes.string).isRequired,
   brushColor: proptypes.string.isRequired,
-  stopTimer: proptypes.bool.isRequired,
+  stopTimer: proptypes.bool,
 };
 
 export default Line;

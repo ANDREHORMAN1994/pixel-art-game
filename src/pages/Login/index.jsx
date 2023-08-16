@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../../redux/slices/user';
+import { reset, setUser } from '../../redux/slices/user';
 
 function Login() {
   const [name, setName] = useState('');
@@ -11,6 +11,10 @@ function Login() {
   const [redirect, setRedirect] = useState(false);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(reset());
+  }, [dispatch]);
 
   useEffect(() => {
     const handleValidation = () => {
@@ -28,7 +32,7 @@ function Login() {
     setRedirect(true);
   };
 
-  if (redirect) return (<Redirect to="/game" />);
+  if (redirect) return (<Redirect to="/home" />);
 
   return (
     <form onSubmit={ handleClick }>
