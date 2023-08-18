@@ -30,7 +30,7 @@ function SelectBoard({ valueSize, setValueSize }) {
         Altere o tamanho do Quadro 🖌️
       </ButtonSelect>
       <FormControl sx={ { m: 1, minWidth: 120, width: '100%', margin: 'auto' } }>
-        <InputLabel id="size-board">Tamanho</InputLabel>
+        <InputLabel sx={ { color: 'white' } } id="size-board">Tamanho</InputLabel>
         <SelectContainer
           labelId="size-board"
           id="size-board"

@@ -13,7 +13,20 @@ export const ButtonSelect = styled(Button)`
 export const SelectContainer = styled(Select)`
   width: 100%;
   color: #fff;
- 
+
+  & fieldset {
+    border: 2px solid #0D86DD;
+
+    &:hover {
+      border: 2px solid #fff;
+    }
+  }
+
+  & svg {
+    fill: #0D86DD;
+  }
+
+  
   > div {
     cursor: url('https://fav.farm/👆') 15 0 , auto;
   }
