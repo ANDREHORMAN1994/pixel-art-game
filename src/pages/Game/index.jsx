@@ -1,7 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { ButtonGroup } from '@mui/material';
+import Box from '@mui/material/Box';
 import Line from '../../components/Line';
 import PaletteColor from '../../components/PaletteColor';
+import { BoardContainer, GameContainer } from './GameStyle';
+import SelectBoard from '../../components/SelectBoard';
+import ButtonMui from '../../components/ButtonMui';
 
 const INITIAL_SIZE = 10;
 
@@ -43,28 +48,54 @@ function Game() {
   const { boardSize, brushColor } = state;
 
   return (
-    <div>
-      <PaletteColor updateBrushColor={ updateBrushColor } screen="game" />
-      <p>{`Tamanho atual do quadro: ${valueSize * valueSize} pixels`}</p>
-      <input
-        type="number"
-        placeholder="Digite um número inteiro 🖌️"
-        onChange={ ({ target: { value } }) => setValueSize(Number(value)) }
-      />
-      <div key={ idBoard }>
-        {boardSize.map((_, index) => (
-          <Line
-            key={ `${index}` }
-            idLine={ `${index}` }
-            boardSize={ boardSize }
-            brushColor={ brushColor }
+    <GameContainer className="container">
+      <section>
+        <div>
+          <PaletteColor
+            updateBrushColor={ updateBrushColor }
+            valueSize={ valueSize }
+            screen="game"
           />
-        ))}
-      </div>
+        </div>
+        <BoardContainer>
+          <SelectBoard valueSize={ valueSize } setValueSize={ setValueSize } />
+          <div key={ idBoard }>
+            {boardSize.map((_, index) => (
+              <Line
+                key={ `${index}` }
+                idLine={ `${index}` }
+                boardSize={ boardSize }
+                brushColor={ brushColor }
+              />
+            ))}
+          </div>
+          <Box
+            sx={ {
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              '& > *': {
+                m: 1,
+              },
+            } }
+          >
+            <ButtonGroup
+              variant="contained"
+              aria-label="large button group"
+            >
+              <ButtonMui type="button" onClick={ clearBoard }>
+                Limpar quadro
+                <span>🖼️</span>
+              </ButtonMui>
+              <ButtonMui type="button" onClick={ () => history.push('/home') }>
+                <span>🏠</span>
+              </ButtonMui>
+            </ButtonGroup>
+          </Box>
+        </BoardContainer>
 
-      <button type="button" onClick={ clearBoard }>Limpar quadro 🖼️</button>
-      <button type="button" onClick={ () => history.push('/home') }>Home 🏠</button>
-    </div>
+      </section>
+    </GameContainer>
   );
 }
 

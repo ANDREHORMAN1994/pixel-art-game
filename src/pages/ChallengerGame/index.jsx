@@ -125,7 +125,11 @@ function ChallengerGame() {
   return (
     <div>
       <Header />
-      <PaletteColor updateBrushColor={ updateBrushColor } screen="challenger" />
+      <PaletteColor
+        updateBrushColor={ updateBrushColor }
+        valueSize={ valueSize }
+        screen="challenger"
+      />
       <div>
         {boardSize.map((_, index) => (
           <Line

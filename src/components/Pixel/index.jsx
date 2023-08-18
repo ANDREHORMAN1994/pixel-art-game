@@ -2,15 +2,19 @@ import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { incrementPixelColor } from '../../redux/slices/game';
-import './Pixel.css';
+import { PixelContainer } from './PixelStyle';
 
 function Pixel({
   idPixel,
-  color = 'white',
-  brushColor = 'black',
+  type,
   updateBrushColor = () => {},
+  brushColor = 'black',
+  color = 'white',
   stopTimer = false,
-  type }) {
+  size = '40px',
+  border = 'none',
+  margin = '1px',
+}) {
   const dispatch = useDispatch();
   const [pixelColor, setPixelColor] = useState(color);
 
@@ -33,8 +37,10 @@ function Pixel({
   }, [dispatch, idPixel, pixelColor, stopTimer, type]);
 
   return (
-    <div
-      className="pixel"
+    <PixelContainer
+      size={ size }
+      border={ border }
+      margin={ margin }
       style={ { backgroundColor: pixelColor } }
       onClick={ () => (type === 'pixelBoard'
         ? changePixelColor()
@@ -45,11 +51,14 @@ function Pixel({
 
 Pixel.propTypes = {
   idPixel: propTypes.string.isRequired,
-  color: propTypes.string.isRequired,
-  brushColor: propTypes.string,
   updateBrushColor: propTypes.func,
+  brushColor: propTypes.string,
   stopTimer: propTypes.bool,
+  color: propTypes.string.isRequired,
   type: propTypes.string.isRequired,
+  size: propTypes.string,
+  border: propTypes.string,
+  margin: propTypes.string,
 };
 
 export default Pixel;

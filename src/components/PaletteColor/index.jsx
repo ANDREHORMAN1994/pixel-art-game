@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import proptypes from 'prop-types';
 import Pixel from '../Pixel';
+import { PaletteContainer } from './PaletteStyle';
+import ButtonMui from '../ButtonMui';
 
 const INITIAL_COLORS = ['white', 'black', 'red', 'green', 'blue', 'yellow'];
 const HEX_LENGTH = 6;
 const HEX_BASE = 16;
 
-function PaletteColor({ updateBrushColor, screen }) {
+function PaletteColor({ updateBrushColor, screen, valueSize }) {
   const [palleteSize, setPalleteSize] = useState(INITIAL_COLORS);
   const [idPallete, setIdPallete] = useState(0);
 
@@ -32,33 +34,54 @@ function PaletteColor({ updateBrushColor, screen }) {
   }, [palleteSize]);
 
   return (
-    <>
-      <div key={ idPallete } className="line">
+    <PaletteContainer>
+      <section>
+        <div className="overlay" />
+        <div key={ idPallete } className="line">
+          {
+            palleteSize.map((color, index) => (
+              <Pixel
+                key={ index }
+                idPixel={ `${index}` }
+                color={ color }
+                brushColor={ color }
+                updateBrushColor={ updateBrushColor }
+                type="pixelPallete"
+                size="70px"
+                border="50%"
+                margin="10px"
+              />
+            ))
+          }
+        </div>
         {
-          palleteSize.map((color, index) => (
-            <Pixel
-              key={ index }
-              idPixel={ `${index}` }
-              color={ color }
-              brushColor={ color }
-              updateBrushColor={ updateBrushColor }
-              type="pixelPallete"
-            />
-          ))
+          screen === 'game' && (
+            <div className="btn-pallete">
+              <ButtonMui
+                type="button"
+                variant="contained"
+                onClick={ generateListColors }
+              >
+                <span>🌈</span>
+                Gerar novas cores
+              </ButtonMui>
+              <p>
+                <strong>
+                  {`Tamanho atual do quadro: ${valueSize * valueSize} pixels`}
+                </strong>
+              </p>
+            </div>
+          )
         }
-      </div>
-      {
-        screen === 'game' && (
-          <button type="button" onClick={ generateListColors }>Gerar novas cores</button>
-        )
-      }
-    </>
+      </section>
+    </PaletteContainer>
   );
 }
 
 PaletteColor.propTypes = {
   updateBrushColor: proptypes.func.isRequired,
   screen: proptypes.string.isRequired,
+  valueSize: proptypes.number.isRequired,
 };
 
 export default PaletteColor;
