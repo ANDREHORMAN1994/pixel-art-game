@@ -3,12 +3,18 @@ import proptypes from 'prop-types';
 import Pixel from '../Pixel';
 import { PaletteContainer } from './PaletteStyle';
 import ButtonMui from '../ButtonMui';
+import Challenger from '../Challenger';
 
 const INITIAL_COLORS = ['white', 'black', 'red', 'green', 'blue', 'yellow'];
 const HEX_LENGTH = 6;
 const HEX_BASE = 16;
 
-function PaletteColor({ updateBrushColor, screen, valueSize }) {
+function PaletteColor({
+  updateBrushColor, screen, valueSize,
+  showButton = false, nextDraw = () => {},
+  setShowButton = () => {}, challenge = {},
+  stopTimer = false, setStopTimer = () => {},
+}) {
   const [palleteSize, setPalleteSize] = useState(INITIAL_COLORS);
   const [idPallete, setIdPallete] = useState(0);
 
@@ -34,7 +40,7 @@ function PaletteColor({ updateBrushColor, screen, valueSize }) {
   }, [palleteSize]);
 
   return (
-    <PaletteContainer>
+    <PaletteContainer screen={ screen }>
       <section>
         <div className="overlay" />
         <div key={ idPallete } className="line">
@@ -55,7 +61,7 @@ function PaletteColor({ updateBrushColor, screen, valueSize }) {
           }
         </div>
         {
-          screen === 'game' && (
+          screen === 'game' ? (
             <div className="btn-pallete">
               <ButtonMui
                 type="button"
@@ -71,6 +77,26 @@ function PaletteColor({ updateBrushColor, screen, valueSize }) {
                 </strong>
               </p>
             </div>
+          ) : (
+            <div className="btn-pallete">
+              <Challenger
+                key={ challenge.drawId }
+                challenge={ challenge }
+                setShowButton={ setShowButton }
+                stopTimer={ stopTimer }
+                setStopTimer={ setStopTimer }
+              />
+              {showButton && (
+                <ButtonMui
+                  type="button"
+                  variant="contained"
+                  onClick={ nextDraw }
+                >
+                  Próximo Desafio
+                  <span>✅</span>
+                </ButtonMui>
+              )}
+            </div>
           )
         }
       </section>
@@ -82,6 +108,16 @@ PaletteColor.propTypes = {
   updateBrushColor: proptypes.func.isRequired,
   screen: proptypes.string.isRequired,
   valueSize: proptypes.number.isRequired,
+  showButton: proptypes.bool,
+  nextDraw: proptypes.func,
+  setShowButton: proptypes.func,
+  stopTimer: proptypes.bool,
+  setStopTimer: proptypes.func,
+  challenge: proptypes.shape({
+    drawId: proptypes.number,
+    drawName: proptypes.string,
+    drawUrl: proptypes.string,
+  }),
 };
 
 export default PaletteColor;

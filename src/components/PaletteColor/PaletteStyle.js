@@ -7,7 +7,7 @@ export const PaletteContainer = styled.div`
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
     padding: 2rem;
 
     > div.overlay {
@@ -23,15 +23,15 @@ export const PaletteContainer = styled.div`
 
     > div.line {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: ${({ screen }) => (
+    screen === 'game' ? 'repeat(3, 1fr)' : 'repeat(6, 1fr)')};
     }
 
     > div.btn-pallete {
       display: flex;
       flex-flow: column nowrap;
-      /* justify-content: center;
-      align-items: center; */
       gap: 2rem;
+      width: 100%;
     }
   }
 `;

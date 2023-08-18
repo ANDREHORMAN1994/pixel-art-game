@@ -39,6 +39,7 @@ export const Button = styled.button`
   font-size: 1.2rem;
   text-transform: uppercase;
   border: none;
+  width: 100%;
 
   > span {
     font-size: 2rem;

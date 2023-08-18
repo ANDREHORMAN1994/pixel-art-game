@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { updateTimer } from '../../redux/slices/game';
 
-const INITIAL_TIMER = 60;
+const INITIAL_TIMER = 5;
 const INTERVAL_SEC = 1000;
 
 let interval;
@@ -30,7 +30,10 @@ function Timer({ setShowButton, stopTimer, setStopTimer }) {
   }, [dispatch, setShowButton, setStopTimer, stopTimer, timer]);
 
   return (
-    <h3>{timer}</h3>
+    <p>
+      {'Tempo restante: '}
+      <strong>{timer}</strong>
+    </p>
   );
 }
 

@@ -2,13 +2,14 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { useHistory } from 'react-router-dom';
+import { Box, ButtonGroup } from '@mui/material';
 import { setScore, setAssertions } from '../../redux/slices/user';
 import Line from '../../components/Line';
 import PaletteColor from '../../components/PaletteColor';
-import Challenger from '../../components/Challenger';
 import draws from '../../utils/draws';
-import Timer from '../../components/Timer';
 import Header from '../../components/Header';
+import { BoardContainer, GameContainer } from './ChallengerStyle';
+import ButtonMui from '../../components/ButtonMui';
 
 const POINT_DEFAULT = 10;
 
@@ -17,6 +18,7 @@ function ChallengerGame() {
   const history = useHistory();
   const { pixelColors, currentTimer } = useSelector(({ game }) => game);
   const [isLoading, setIsLoading] = useState(true);
+  const [idBoard, setIdBoard] = useState(0);
   const [showButton, setShowButton] = useState(false);
   const [indexDraw, setIndexDraw] = useState(0);
   const [valueSize, setValueSize] = useState(0);
@@ -57,6 +59,10 @@ function ChallengerGame() {
       setShowButton(false);
     }
   }, [history, indexDraw]);
+
+  const clearBoard = useCallback(() => {
+    setIdBoard((prev) => prev + 1);
+  }, []);
 
   useEffect(() => {
     const showAlert = (result) => {
@@ -123,42 +129,64 @@ function ChallengerGame() {
   const { boardSize, brushColor } = state;
 
   return (
-    <div>
+    <GameContainer className="container">
       <Header />
-      <PaletteColor
-        updateBrushColor={ updateBrushColor }
-        valueSize={ valueSize }
-        screen="challenger"
-      />
-      <div>
-        {boardSize.map((_, index) => (
-          <Line
-            key={ `${index}` }
-            idLine={ `${index}` }
-            boardSize={ boardSize }
-            brushColor={ brushColor }
-            stopTimer={ stopTimer }
-          />
-        ))}
-      </div>
-
-      {showButton && (
-        <button type="button" onClick={ nextDraw }>Próximo Desafio</button>
-      )}
-
       {isLoading ? <h1>Loading...</h1> : (
-        <div>
-          <Timer
-            setShowButton={ setShowButton }
-            stopTimer={ stopTimer }
-            setStopTimer={ setStopTimer }
-          />
-          <Challenger key={ challenge.drawId } challenge={ challenge } />
-        </div>
-      )}
+        <section>
+          <div>
+            <PaletteColor
+              updateBrushColor={ updateBrushColor }
+              valueSize={ valueSize }
+              screen="challenger"
+              showButton={ showButton }
+              nextDraw={ nextDraw }
+              setShowButton={ setShowButton }
+              stopTimer={ stopTimer }
+              setStopTimer={ setStopTimer }
+              challenge={ challenge }
+            />
 
-      <button type="button" onClick={ () => history.push('/home') }>Home 🏠</button>
-    </div>
+          </div>
+          <BoardContainer>
+            <p>Tente replicar o desenho aqui 👇</p>
+            <div key={ idBoard }>
+              {boardSize.map((_, index) => (
+                <Line
+                  key={ `${index}` }
+                  idLine={ `${index}` }
+                  boardSize={ boardSize }
+                  brushColor={ brushColor }
+                  stopTimer={ stopTimer }
+                />
+              ))}
+            </div>
+            <Box
+              sx={ {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                '& > *': {
+                  m: 1,
+                },
+              } }
+            >
+              <ButtonGroup
+                variant="contained"
+                aria-label="large button group"
+              >
+                <ButtonMui type="button" onClick={ clearBoard }>
+                  Limpar quadro
+                  <span>🖼️</span>
+                </ButtonMui>
+                <ButtonMui type="button" onClick={ () => history.push('/home') }>
+                  <span>🏠</span>
+                </ButtonMui>
+              </ButtonGroup>
+            </Box>
+          </BoardContainer>
+        </section>
+      )}
+    </GameContainer>
   );
 }
 

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
+import Avatar from '@mui/material/Avatar';
 import { useDispatch, useSelector } from 'react-redux';
 import { MD5 } from 'crypto-js';
 import { setUser } from '../../redux/slices/user';
 import { writeLocalStorage } from '../../utils/localStorage';
+import { HeaderContainer } from './HeaderStyle';
 
 const GRAVATAR_URL = 'https://www.gravatar.com/avatar/';
 
@@ -27,11 +29,17 @@ function Header() {
   }, [assertions, dispatch, email, name, score]);
 
   return (
-    <div>
-      <p>{name}</p>
-      <img src={ gravatarImg } alt="Imagem de perfil do usuário" />
-      <p>{score}</p>
-    </div>
+    <HeaderContainer>
+      <div>
+        <Avatar
+          sx={ { width: 56, height: 56 } }
+          src={ gravatarImg }
+          alt="Imagem de perfil do usuário"
+        />
+        <p>{name}</p>
+      </div>
+      <p>{`Pontuação: ${score}`}</p>
+    </HeaderContainer>
   );
 }
 
