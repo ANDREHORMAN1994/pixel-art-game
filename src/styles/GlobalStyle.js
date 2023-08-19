@@ -11,9 +11,14 @@ export default createGlobalStyle`
   src: url('/fonts/pixel2.ttf') format('truetype');
 }
 
-@font-face {
+/* @font-face {
   font-family: PixelText;
   src: url('/fonts/pixel3.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: PixelText;
+  src: url('/fonts/pixel4.otf') format('opentype');
 }
 
 * {

@@ -32,7 +32,7 @@ function Header() {
     <HeaderContainer>
       <div>
         <Avatar
-          sx={ { width: 56, height: 56 } }
+          sx={ { width: 70, height: 70, border: '3px solid white' } }
           src={ gravatarImg }
           alt="Imagem de perfil do usuário"
         />

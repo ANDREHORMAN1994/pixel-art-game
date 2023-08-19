@@ -13,6 +13,11 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
+
+    > p {
+      font-family: PixelText, sans-serif;
+      font-size: 1.2rem;
+    }
   }
 
   p {

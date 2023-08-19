@@ -32,6 +32,14 @@ export const PaletteContainer = styled.div`
       flex-flow: column nowrap;
       gap: 2rem;
       width: 100%;
+
+      > p {
+        width: 20rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        line-height: 1.8rem;
+      }
     }
   }
 `;

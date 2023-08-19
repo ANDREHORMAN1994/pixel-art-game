@@ -1,8 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { Avatar } from '@mui/material';
 import { reset } from '../../redux/slices/user';
 import { readLocalStorage } from '../../utils/localStorage';
+import { RankingContainer, RankingUser } from './RankingStyle';
+import ButtonMui from '../../components/ButtonMui';
 
 function Ranking() {
   const history = useHistory();
@@ -15,20 +18,38 @@ function Ranking() {
   };
 
   return (
-    <div>
+    <RankingContainer className="container">
       <h1>Ranking</h1>
-      <div>
+      <section>
         {localUser.map(({ name, imgGravatar, assertions, score }, index) => (
-          <div key={ index }>
-            <p>{name}</p>
-            <p>{`Artes pintadas: ${assertions}`}</p>
-            <p>{`Pontuação alcançada: ${score}`}</p>
-            <img src={ imgGravatar } alt="Imagem do usuário" />
-          </div>
+          <RankingUser key={ index }>
+            <div className="perfil">
+              <p>
+                {`${index + 1}º`}
+              </p>
+              <Avatar
+                sx={ { width: 70, height: 70, border: '3px solid white' } }
+                src={ imgGravatar }
+                alt="Imagem de perfil do usuário"
+              />
+              <p>{name}</p>
+            </div>
+            <div className="points">
+              <p>{`Artes pintadas: ${assertions}`}</p>
+              <p>{`Pontuação alcançada: ${score}`}</p>
+            </div>
+          </RankingUser>
         ))}
-      </div>
-      <button type="button" onClick={ playAgain }>Jogue Novamente 😎</button>
-    </div>
+      </section>
+      <ButtonMui
+        type="button"
+        variant="contained"
+        onClick={ playAgain }
+      >
+        Jogue Novamente
+        <span>😎</span>
+      </ButtonMui>
+    </RankingContainer>
   );
 }
 

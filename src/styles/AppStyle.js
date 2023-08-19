@@ -65,6 +65,12 @@ export const Button = styled.button`
 export const Input = styled(TextField)`
   input {
     color: ${({ theme }) => theme.textPure};
+    caret-color: ${({ theme }) => theme.textPure};
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.2rem 2rem;
+    min-width: 20rem;
   
   &:-webkit-autofill,
   &:-webkit-autofill:hover,

@@ -10,13 +10,14 @@ export const ChallengerStyle = styled.div`
 
   > div.infos-challenger {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    gap: 0.8rem;
     
     > p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 400;
 
       > strong {

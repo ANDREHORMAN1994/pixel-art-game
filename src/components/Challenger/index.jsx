@@ -9,15 +9,15 @@ function Challenger({ challenge: { name, draw },
   return (
     <ChallengerStyle>
       <div className="infos-challenger">
-        <p>
-          {'Challenger '}
-          <strong>{name}</strong>
-        </p>
         <Timer
           setShowButton={ setShowButton }
           stopTimer={ stopTimer }
           setStopTimer={ setStopTimer }
         />
+        <p>
+          {'Challenger '}
+          <strong>{name}</strong>
+        </p>
       </div>
       <div>
         {

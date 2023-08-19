@@ -15,7 +15,10 @@ export const LoginContainer = styled.form`
       color: ${({ theme }) => theme.textPure};
       display: flex;
       flex-flow: column nowrap;
-      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
     }
   }
 `;
