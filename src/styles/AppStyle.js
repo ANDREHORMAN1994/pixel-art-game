@@ -11,6 +11,10 @@ export const TitleContainer = styled.div`
   gap: 2rem;
   margin-top: 5rem;
 
+  @media (max-width: 700px) {
+    gap: 0.5rem;
+  }
+
   > h1 {
     font-size: 3rem;
 
@@ -22,6 +26,18 @@ export const TitleContainer = styled.div`
     }
     &:nth-child(3) {
       color: ${({ theme }) => theme.third};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
     }
   }
 `;
@@ -40,10 +56,31 @@ export const Button = styled.button`
   text-transform: uppercase;
   border: none;
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    text-align: center;
+    padding: 1rem;
+  }
 
   > span {
     font-size: 2rem;
     margin-left: 1rem;
+
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
+      margin-left: 0.3rem;
+    }
   }
   
   &:hover {
@@ -71,16 +108,25 @@ export const Input = styled(TextField)`
     font-weight: bold;
     padding: 1.2rem 2rem;
     min-width: 20rem;
+
+    @media (max-width: 1000px) {
+      min-width: 15rem;
+    }
+
+    @media (max-width: 700px) {
+      min-width: 10rem;
+      font-size: 0.8rem;
+    }
   
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    -webkit-transition-delay: 0.1s;
-    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.inputAutoComplete}
-      inset !important;
-    -webkit-text-fill-color: ${({ theme }) => theme.textPure} !important;
-    animation: none !important;
-  }
+      -webkit-transition-delay: 0.1s;
+      -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.inputAutoComplete}
+        inset !important;
+      -webkit-text-fill-color: ${({ theme }) => theme.textPure} !important;
+      animation: none !important;
+    }
   }
 `;

@@ -7,6 +7,15 @@ export const GameContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
     gap: 5rem;
+
+    @media (max-width: 1000px) {
+      gap: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      flex-flow: column nowrap;
+      gap: 1rem;
+    }
   }
 `;
 

@@ -41,6 +41,7 @@ function Pixel({
       size={ size }
       border={ border }
       margin={ margin }
+      type={ type }
       style={ { backgroundColor: pixelColor } }
       onClick={ () => (type === 'pixelBoard'
         ? changePixelColor()

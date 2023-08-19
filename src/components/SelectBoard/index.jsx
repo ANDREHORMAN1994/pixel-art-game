@@ -1,12 +1,29 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import proptypes from 'prop-types';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import { MenuItem } from '@mui/material';
 import { ButtonSelect, SelectContainer } from './SelectStyle';
 
+const MOBILE_SIZE = 1000;
+const BOARD_VALUES = ['5', '10', '16'];
+
 function SelectBoard({ valueSize, setValueSize }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [boardValues, setBoardValues] = useState(BOARD_VALUES);
+
+  const isMobile = () => window.innerWidth <= MOBILE_SIZE;
+
+  const handleResize = () => {
+    if (isMobile()) {
+      setBoardValues(['5', '10']);
+    } else {
+      setBoardValues(BOARD_VALUES);
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
 
   const handleChange = ({ target: { value } }) => {
     setValueSize(Number(value));
@@ -19,6 +36,8 @@ function SelectBoard({ valueSize, setValueSize }) {
   const handleOpen = () => {
     setOpen(true);
   };
+
+  useEffect(handleResize, []);
 
   return (
     <div>
@@ -51,9 +70,11 @@ function SelectBoard({ valueSize, setValueSize }) {
             },
           } }
         >
-          <MenuItem value={ 5 }>25 Pixels</MenuItem>
-          <MenuItem value={ 10 }>100 Pixels</MenuItem>
-          <MenuItem value={ 16 }>256 Pixels</MenuItem>
+          {boardValues.map((value) => (
+            <MenuItem key={ value } value={ value }>
+              {`${value * value} Pixels`}
+            </MenuItem>
+          ))}
         </SelectContainer>
       </FormControl>
     </div>

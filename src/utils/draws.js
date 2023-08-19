@@ -4,6 +4,7 @@ const draws = [
     name: 'Love Heart',
     difficulty: 'easy',
     pixelSize: 10,
+    screen: 'any',
     draw: [
       {
         id: '00',
@@ -412,6 +413,7 @@ const draws = [
     name: 'Pokéball',
     difficulty: 'easy',
     pixelSize: 10,
+    screen: 'any',
     draw: [
       {
         id: '00',
@@ -820,6 +822,7 @@ const draws = [
     name: 'Pac-Man Ghost',
     difficulty: 'easy',
     pixelSize: 10,
+    screen: 'any',
     draw: [
       {
         id: '00',
@@ -1228,6 +1231,7 @@ const draws = [
     name: 'Punisher Skull',
     difficulty: 'medium',
     pixelSize: 10,
+    screen: 'any',
     draw: [
       {
         id: '00',
@@ -1636,6 +1640,7 @@ const draws = [
     name: 'Mario Mushroom',
     difficulty: 'medium',
     pixelSize: 12,
+    screen: 'desktop',
     draw: [
       {
         id: '00',
@@ -2212,6 +2217,7 @@ const draws = [
     name: 'Mario Star',
     difficulty: 'hard',
     pixelSize: 16,
+    screen: 'desktop',
     draw: [
       {
         id: '00',

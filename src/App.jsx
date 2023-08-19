@@ -14,7 +14,10 @@ function App() {
         <TitleContainer>
           <h1>PIXEL</h1>
           <h1>ART</h1>
-          <h1>GAME 🎨</h1>
+          <h1>
+            GAME
+            <span>🎨</span>
+          </h1>
         </TitleContainer>
 
         <Switch>

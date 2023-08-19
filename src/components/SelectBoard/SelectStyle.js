@@ -8,6 +8,15 @@ export const ButtonSelect = styled(Button)`
   font-weight: 300;
   color: #fff;
   width: 100%;
+
+  @media (max-width: 1000px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 700px) {
+    letter-spacing: 0rem;
+    font-weight: bold;
+  }
 `;
 
 export const SelectContainer = styled(Select)`

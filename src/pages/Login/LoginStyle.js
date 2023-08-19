@@ -10,6 +10,14 @@ export const LoginContainer = styled.form`
     box-shadow: 0 0 1rem ${({ theme }) => theme.inputBackground};
     padding: 5rem;
 
+    @media (max-width: 1000px) {
+      padding: 4rem;
+    }
+
+    @media (max-width: 700px) {
+      padding: 2rem;
+    }
+
     > label {
       font-size: 1.5rem;
       color: ${({ theme }) => theme.textPure};
@@ -19,6 +27,16 @@ export const LoginContainer = styled.form`
       align-items: center;
       gap: 1.2rem;
       margin-bottom: 2rem;
+
+      @media (max-width: 1000px) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 1rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 `;

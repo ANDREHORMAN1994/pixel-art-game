@@ -10,6 +10,10 @@ export const PaletteContainer = styled.div`
     min-height: 50vh;
     padding: 2rem;
 
+    @media (max-width: 1000px) {
+      padding: 1.5rem;
+    }
+
     > div.overlay {
       position: absolute;
       width: 100%;
@@ -30,8 +34,14 @@ export const PaletteContainer = styled.div`
     > div.btn-pallete {
       display: flex;
       flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
       gap: 2rem;
       width: 100%;
+
+      @media (max-width: 1000px) {
+        gap: 1rem;
+      }
 
       > p {
         width: 20rem;
@@ -39,6 +49,12 @@ export const PaletteContainer = styled.div`
         display: flex;
         justify-content: center;
         line-height: 1.8rem;
+
+        @media (max-width: 1000px) {
+          width: 15rem;
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
       }
     }
   }

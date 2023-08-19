@@ -12,6 +12,7 @@ import { BoardContainer, GameContainer } from './ChallengerStyle';
 import ButtonMui from '../../components/ButtonMui';
 
 const POINT_DEFAULT = 10;
+const MOBILE_SIZE = 1000;
 
 function ChallengerGame() {
   const dispatch = useDispatch();
@@ -24,10 +25,24 @@ function ChallengerGame() {
   const [valueSize, setValueSize] = useState(0);
   const [challenge, setChallenge] = useState({});
   const [stopTimer, setStopTimer] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
   const [state, setState] = useState({
     boardSize: new Array(valueSize).fill('white'),
     brushColor: 'black',
   });
+
+  const isMobile = () => window.innerWidth <= MOBILE_SIZE;
+
+  const handleResize = () => {
+    if (isMobile()) {
+      setIsDesktop(false);
+    } else {
+      setIsDesktop(true);
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+  useEffect(handleResize, []);
 
   const updateBrushColor = (newColor) => {
     setState({
@@ -53,12 +68,15 @@ function ChallengerGame() {
     if (indexDraw + 1 === draws.length) {
       history.push('/ranking');
     } else {
+      if (!isDesktop && draws[indexDraw + 1].screen === 'desktop') {
+        history.push('/ranking');
+      }
       setIndexDraw(indexDraw + 1);
       setIsLoading(true);
       setStopTimer(false);
       setShowButton(false);
     }
-  }, [history, indexDraw]);
+  }, [history, indexDraw, isDesktop]);
 
   const clearBoard = useCallback(() => {
     setIdBoard((prev) => prev + 1);
