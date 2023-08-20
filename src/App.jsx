@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Aos from 'aos';
@@ -16,6 +16,7 @@ import ConfettiEffect from './components/Confetti';
 const TIMEOUT_LOADING = 1000;
 
 function App() {
+  const [showConfetti, setShowConfetti] = useState(false);
   const { loading } = useSelector((state) => state.game);
   const dispatch = useDispatch();
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
   return (
     <main className="app-container">
       {pathname === '/ranking' && <ConfettiEffect />}
+      {pathname === '/challenger' && showConfetti && <ConfettiEffect />}
 
       <section className="container">
         {pathname !== '/challenger' && (
@@ -51,7 +53,14 @@ function App() {
               <Route exact path="/" component={ Login } />
               <Route exact path="/home" component={ Home } />
               <Route exact path="/game" component={ Game } />
-              <Route exact path="/challenger" component={ ChallengerGame } />
+              <Route
+                exact
+                path="/challenger"
+                render={ (props) => (<ChallengerGame
+                  { ...props }
+                  setShowConfetti={ setShowConfetti }
+                />) }
+              />
               <Route exact path="/ranking" component={ Ranking } />
             </Switch>
           )}

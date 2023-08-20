@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
+import proptypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { Box, ButtonGroup } from '@mui/material';
 import { setScore, setAssertions } from '../../redux/slices/user';
@@ -11,11 +12,10 @@ import Header from '../../components/Header';
 import { BoardContainer, GameContainer } from './ChallengerStyle';
 import ButtonMui from '../../components/ButtonMui';
 import Loading from '../../components/Loading';
-import ConfettiEffect from '../../components/Confetti';
 
 const MOBILE_SIZE = 1000;
 
-function ChallengerGame() {
+function ChallengerGame({ setShowConfetti }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const { pixelColors, currentTimer } = useSelector(({ game }) => game);
@@ -27,7 +27,6 @@ function ChallengerGame() {
   const [challenge, setChallenge] = useState({});
   const [stopTimer, setStopTimer] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
-  const [showConfetti, setShowConfetti] = useState(false);
   const [state, setState] = useState({
     boardSize: new Array(valueSize).fill('white'),
     brushColor: 'black',
@@ -83,13 +82,13 @@ function ChallengerGame() {
       setIsLoading(true);
       setStopTimer(false);
       setShowButton(false);
-      setShowConfetti(false);
       setState((prev) => ({
         ...prev,
         brushColor: 'black',
       }));
+      setShowConfetti(false);
     }
-  }, [history, indexDraw, isDesktop]);
+  }, [history, indexDraw, isDesktop, setShowConfetti]);
 
   const clearBoard = useCallback(() => {
     setIdBoard((prev) => prev + 1);
@@ -101,12 +100,12 @@ function ChallengerGame() {
         calculateScore();
         setStopTimer(true);
         setShowButton(true);
-        setShowConfetti(true);
         Swal.fire(
           'Parabéns!',
           `Tempo: ${currentTimer} segundos`,
           'success',
         );
+        setShowConfetti(true);
       }
     };
     const verifyResult = () => {
@@ -122,7 +121,7 @@ function ChallengerGame() {
       }
     };
     verifyResult();
-  }, [calculateScore, currentTimer, indexDraw, pixelColors]);
+  }, [calculateScore, currentTimer, indexDraw, pixelColors, setShowConfetti]);
 
   useEffect(() => {
     const formatDraw = () => {
@@ -162,7 +161,6 @@ function ChallengerGame() {
 
   return (
     <>
-      {showConfetti && <ConfettiEffect adjustHeight={ 430 } />}
       <Header isDesktop={ isDesktop } />
       <GameContainer className="container">
         {isLoading ? <Loading /> : (
@@ -223,5 +221,9 @@ function ChallengerGame() {
     </>
   );
 }
+
+ChallengerGame.propTypes = {
+  setShowConfetti: proptypes.func.isRequired,
+};
 
 export default ChallengerGame;

@@ -19,6 +19,7 @@ export const LoginContainer = styled.form`
     }
 
     > label {
+      font-family: PixelFont , sans-serif;
       font-size: 1.5rem;
       color: ${({ theme }) => theme.textPure};
       display: flex;

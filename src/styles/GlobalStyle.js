@@ -43,7 +43,7 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: PixelFont , sans-serif;
+    font-family: sans-serif;
     height: 100%;
     min-height: 100vh;
     max-width: 100vw;
