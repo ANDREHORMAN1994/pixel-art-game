@@ -7,7 +7,7 @@ export const PaletteContainer = styled.div`
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    min-height: 40vh;
+    min-height: 35vh;
     padding: 2rem;
 
     @media (max-width: 700px) {
@@ -33,7 +33,6 @@ export const PaletteContainer = styled.div`
       @media (max-width: 1000px) {
         grid-template-columns: repeat(3, 1fr);
       }
-
     }
 
     > div.btn-pallete {

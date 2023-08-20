@@ -44,6 +44,7 @@ export default createGlobalStyle`
     background-size: cover;
     background-position: center;
     font-family: PixelFont , sans-serif;
+    height: 100%;
     min-height: 100vh;
     max-width: 100vw;
     display: flex;
@@ -51,7 +52,7 @@ export default createGlobalStyle`
     align-items: center;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
     font-family: PixelTitle , sans-serif;
   }
 

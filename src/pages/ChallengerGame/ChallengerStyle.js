@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 
 export const GameContainer = styled.div`
-    > section {
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 700px) {
+    margin-top: 6.5rem;
+  }
+
+  > section {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

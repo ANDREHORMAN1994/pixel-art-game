@@ -32,7 +32,7 @@ function Header({ isDesktop }) {
   }, [assertions, dispatch, email, name, score]);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer data-aos="fade-down">
       <div>
         <Avatar
           sx={ isDesktop ? imgStyleDesktop : imgStyleMobile }

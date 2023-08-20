@@ -50,14 +50,14 @@ function Game() {
   return (
     <GameContainer className="container">
       <section>
-        <div>
+        <div data-aos="fade-up">
           <PaletteColor
             updateBrushColor={ updateBrushColor }
             valueSize={ valueSize }
             screen="game"
           />
         </div>
-        <BoardContainer>
+        <BoardContainer data-aos="fade-up">
           <SelectBoard valueSize={ valueSize } setValueSize={ setValueSize } />
           <div key={ idBoard }>
             {boardSize.map((_, index) => (

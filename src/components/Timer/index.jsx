@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { updateTimer } from '../../redux/slices/game';
 
-const INITIAL_TIMER = 60;
+const INITIAL_TIMER = 0;
 const INTERVAL_SEC = 1000;
 
 let interval;
@@ -14,7 +14,7 @@ function Timer({ setShowButton, stopTimer, setStopTimer }) {
 
   useEffect(() => {
     interval = setInterval(() => {
-      setTimer((prev) => prev - 1);
+      setTimer((prev) => prev + 1);
     }, INTERVAL_SEC);
     return () => clearInterval(interval);
   }, []);
@@ -22,16 +22,16 @@ function Timer({ setShowButton, stopTimer, setStopTimer }) {
   useEffect(() => {
     dispatch(updateTimer(timer));
     if (stopTimer) clearInterval(interval);
-    if (timer === 0) {
-      clearInterval(interval);
-      setShowButton(true);
-      setStopTimer(true);
-    }
+    // if (timer === 0) {
+    //   clearInterval(interval);
+    //   setShowButton(true);
+    //   setStopTimer(true);
+    // }
   }, [dispatch, setShowButton, setStopTimer, stopTimer, timer]);
 
   return (
     <p>
-      {'Tempo restante: '}
+      {'Tempo gasto: '}
       <strong>{timer}</strong>
     </p>
   );

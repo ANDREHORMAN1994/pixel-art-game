@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
   pixelColors: [],
-  currentTimer: 60,
+  currentTimer: 0,
+  loading: true,
 };
 
 const gameSlice = createSlice({
@@ -20,9 +21,12 @@ const gameSlice = createSlice({
     updateTimer: (state, { payload }) => {
       state.currentTimer = payload;
     },
+    setLoading: (state, { payload }) => {
+      state.loading = payload;
+    },
   },
 });
 
-export const { incrementPixelColor, updateTimer } = gameSlice.actions;
+export const { incrementPixelColor, updateTimer, setLoading } = gameSlice.actions;
 
 export default gameSlice.reducer;

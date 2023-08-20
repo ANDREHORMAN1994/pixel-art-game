@@ -56,7 +56,7 @@ function Login() {
   if (redirect) return (<Redirect to="/home" />);
 
   return (
-    <LoginContainer onSubmit={ handleClick } className="container">
+    <LoginContainer onSubmit={ handleClick } className="container" data-aos="fade-up">
       <section>
         <label htmlFor="name">
           Escreva seu Nome

@@ -5,13 +5,17 @@ export const HeaderContainer = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  background: ${({ theme }) => theme.border};
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 0 1rem ${({ theme }) => theme.inputBackground};
+  width: 100vw !important;
 
   @media (max-width: 700px) {
-    flex-flow: column nowrap;
-    justify-content: center;
-    width: 80%;
-    gap: 1rem;
+    padding: 0.8rem 0;
   }
 
   > div {
@@ -19,7 +23,7 @@ export const HeaderContainer = styled.div`
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-evenly;
-    gap: 1rem;
+    gap: 1.5rem;
 
     > p {
       font-family: PixelText, sans-serif;
@@ -46,7 +50,7 @@ export const HeaderContainer = styled.div`
     }
 
     @media (max-width: 700px) {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 `;

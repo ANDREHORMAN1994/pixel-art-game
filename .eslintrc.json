@@ -4,6 +4,7 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "max-lines": "off",
-  "react/jsx-max-depth": "off"
+    "react/jsx-max-depth": "off",
+    "react/no-multi-comp": "off"
   }
 }

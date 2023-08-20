@@ -17,7 +17,7 @@ function Ranking() {
   };
 
   return (
-    <RankingContainer className="container">
+    <RankingContainer className="container" data-aos="fade-up">
       <h1>Ranking</h1>
       <section>
         {localUser.map(({ name, imgGravatar, assertions, score }, index) => (

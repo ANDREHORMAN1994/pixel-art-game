@@ -10,8 +10,9 @@ import draws from '../../utils/draws';
 import Header from '../../components/Header';
 import { BoardContainer, GameContainer } from './ChallengerStyle';
 import ButtonMui from '../../components/ButtonMui';
+import Loading from '../../components/Loading';
+import ConfettiEffect from '../../components/Confetti';
 
-const POINT_DEFAULT = 10;
 const MOBILE_SIZE = 1000;
 
 function ChallengerGame() {
@@ -26,6 +27,7 @@ function ChallengerGame() {
   const [challenge, setChallenge] = useState({});
   const [stopTimer, setStopTimer] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
+  const [showConfetti, setShowConfetti] = useState(false);
   const [state, setState] = useState({
     boardSize: new Array(valueSize).fill('white'),
     brushColor: 'black',
@@ -58,8 +60,13 @@ function ChallengerGame() {
       medium: 2,
       hard: 3,
     };
-    const result = POINT_DEFAULT + (
-      currentTimer * difficultyValues[challenge.difficulty]
+    const baseScore = 100 * difficultyValues[challenge.difficulty];
+    const scorePerSecond = 1;
+    const minScore = 50;
+
+    const result = Math.max(
+      minScore,
+      baseScore - scorePerSecond * currentTimer,
     );
     dispatch(setScore(result));
     dispatch(setAssertions());
@@ -76,6 +83,11 @@ function ChallengerGame() {
       setIsLoading(true);
       setStopTimer(false);
       setShowButton(false);
+      setShowConfetti(false);
+      setState((prev) => ({
+        ...prev,
+        brushColor: 'black',
+      }));
     }
   }, [history, indexDraw, isDesktop]);
 
@@ -89,9 +101,10 @@ function ChallengerGame() {
         calculateScore();
         setStopTimer(true);
         setShowButton(true);
+        setShowConfetti(true);
         Swal.fire(
           'Parabéns!',
-          'Você acertou!!',
+          `Tempo: ${currentTimer} segundos`,
           'success',
         );
       }
@@ -109,7 +122,7 @@ function ChallengerGame() {
       }
     };
     verifyResult();
-  }, [calculateScore, indexDraw, pixelColors]);
+  }, [calculateScore, currentTimer, indexDraw, pixelColors]);
 
   useEffect(() => {
     const formatDraw = () => {
@@ -148,64 +161,66 @@ function ChallengerGame() {
   const { boardSize, brushColor } = state;
 
   return (
-    <GameContainer className="container">
+    <>
+      {showConfetti && <ConfettiEffect adjustHeight={ 430 } />}
       <Header isDesktop={ isDesktop } />
-      {isLoading ? <h1>Loading...</h1> : (
-        <section>
-          <div>
-            <PaletteColor
-              updateBrushColor={ updateBrushColor }
-              valueSize={ valueSize }
-              screen="challenger"
-              showButton={ showButton }
-              nextDraw={ nextDraw }
-              setShowButton={ setShowButton }
-              stopTimer={ stopTimer }
-              setStopTimer={ setStopTimer }
-              challenge={ challenge }
-            />
-
-          </div>
-          <BoardContainer>
-            <p>Tente replicar o desenho aqui 👇</p>
-            <div key={ idBoard }>
-              {boardSize.map((_, index) => (
-                <Line
-                  key={ `${index}` }
-                  idLine={ `${index}` }
-                  boardSize={ boardSize }
-                  brushColor={ brushColor }
-                  stopTimer={ stopTimer }
-                />
-              ))}
+      <GameContainer className="container">
+        {isLoading ? <Loading /> : (
+          <section>
+            <div data-aos="fade-up">
+              <PaletteColor
+                updateBrushColor={ updateBrushColor }
+                valueSize={ valueSize }
+                screen="challenger"
+                showButton={ showButton }
+                nextDraw={ nextDraw }
+                setShowButton={ setShowButton }
+                stopTimer={ stopTimer }
+                setStopTimer={ setStopTimer }
+                challenge={ challenge }
+              />
             </div>
-            <Box
-              sx={ {
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                '& > *': {
-                  m: 1,
-                },
-              } }
-            >
-              <ButtonGroup
-                variant="contained"
-                aria-label="large button group"
+            <BoardContainer data-aos="fade-up">
+              <p>Tente replicar o desenho aqui 👇</p>
+              <div key={ idBoard }>
+                {boardSize.map((_, index) => (
+                  <Line
+                    key={ `${index}` }
+                    idLine={ `${index}` }
+                    boardSize={ boardSize }
+                    brushColor={ brushColor }
+                    stopTimer={ stopTimer }
+                  />
+                ))}
+              </div>
+              <Box
+                sx={ {
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  '& > *': {
+                    m: 1,
+                  },
+                } }
               >
-                <ButtonMui type="button" onClick={ clearBoard }>
-                  Limpar quadro
-                  <span>🖼️</span>
-                </ButtonMui>
-                <ButtonMui type="button" onClick={ () => history.push('/home') }>
-                  <span>🏠</span>
-                </ButtonMui>
-              </ButtonGroup>
-            </Box>
-          </BoardContainer>
-        </section>
-      )}
-    </GameContainer>
+                <ButtonGroup
+                  variant="contained"
+                  aria-label="large button group"
+                >
+                  <ButtonMui type="button" onClick={ clearBoard }>
+                    Limpar quadro
+                    <span>🖼️</span>
+                  </ButtonMui>
+                  <ButtonMui type="button" onClick={ () => history.push('/home') }>
+                    <span>🏠</span>
+                  </ButtonMui>
+                </ButtonGroup>
+              </Box>
+            </BoardContainer>
+          </section>
+        )}
+      </GameContainer>
+    </>
   );
 }
 

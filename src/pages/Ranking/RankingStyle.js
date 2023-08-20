@@ -60,7 +60,7 @@ export const RankingUser = styled.div`
     width: 20rem;
 
     @media (max-width: 700px) {
-      width: 100%;
+      width: 80%;
     }
   }
 
