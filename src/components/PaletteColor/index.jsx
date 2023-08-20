@@ -10,7 +10,7 @@ const HEX_LENGTH = 6;
 const HEX_BASE = 16;
 
 function PaletteColor({
-  updateBrushColor, screen, valueSize,
+  updateBrushColor, screen,
   showButton = false, nextDraw = () => {},
   setShowButton = () => {}, challenge = {},
   stopTimer = false, setStopTimer = () => {},
@@ -71,11 +71,11 @@ function PaletteColor({
                 <span>🌈</span>
                 Gerar novas cores
               </ButtonMui>
-              <p>
+              {/* <p>
                 <strong>
                   {`Tamanho atual do quadro: ${valueSize * valueSize} pixels`}
                 </strong>
-              </p>
+              </p> */}
             </div>
           ) : (
             <div className="btn-pallete">
@@ -107,7 +107,6 @@ function PaletteColor({
 PaletteColor.propTypes = {
   updateBrushColor: proptypes.func.isRequired,
   screen: proptypes.string.isRequired,
-  valueSize: proptypes.number.isRequired,
   showButton: proptypes.bool,
   nextDraw: proptypes.func,
   setShowButton: proptypes.func,

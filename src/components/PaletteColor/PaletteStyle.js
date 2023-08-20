@@ -7,11 +7,11 @@ export const PaletteContainer = styled.div`
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    min-height: 50vh;
+    min-height: 40vh;
     padding: 2rem;
 
-    @media (max-width: 1000px) {
-      padding: 1.5rem;
+    @media (max-width: 700px) {
+      padding: 1rem 2rem;
     }
 
     > div.overlay {
@@ -29,6 +29,11 @@ export const PaletteContainer = styled.div`
       display: grid;
       grid-template-columns: ${({ screen }) => (
     screen === 'game' ? 'repeat(3, 1fr)' : 'repeat(6, 1fr)')};
+
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
     }
 
     > div.btn-pallete {
@@ -38,6 +43,7 @@ export const PaletteContainer = styled.div`
       align-items: center;
       gap: 2rem;
       width: 100%;
+      margin-top: 1rem;
 
       @media (max-width: 1000px) {
         gap: 1rem;
@@ -54,6 +60,12 @@ export const PaletteContainer = styled.div`
           width: 15rem;
           font-size: 0.8rem;
           line-height: 1.2rem;
+        }
+
+        @media (max-width: 700px) {
+          width: 10rem;
+          font-size: 0.6rem;
+          line-height: 1rem;
         }
       }
     }

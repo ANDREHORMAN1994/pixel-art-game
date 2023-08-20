@@ -20,6 +20,12 @@ export const PixelContainer = styled.div`
   border: 2px solid ${({ theme }) => theme.inputBackground};
   border-radius: ${({ border }) => border};
 
+  @media (max-width: 1000px) {
+    margin: ${({ margin, type }) => (type === 'pixelBoard'
+    ? formatValuePixel(margin, MOBILE_MARGIN_PIXEL)
+    : formatValuePixel(margin, MOBILE_MARGIN_PALETTE))};
+  }
+
   @media (max-width: 700px) {
     height: ${({ size, type }) => (type === 'pixelBoard'
     ? formatValuePixel(size, MOBILE_FONT_PIXEL)
@@ -27,8 +33,5 @@ export const PixelContainer = styled.div`
     width: ${({ size, type }) => (type === 'pixelBoard'
     ? formatValuePixel(size, MOBILE_FONT_PIXEL)
     : formatValuePixel(size, MOBILE_FONT_PALETTE))};
-    margin: ${({ margin, type }) => (type === 'pixelBoard'
-    ? formatValuePixel(margin, MOBILE_MARGIN_PIXEL)
-    : formatValuePixel(margin, MOBILE_MARGIN_PALETTE))};
   }
 `;

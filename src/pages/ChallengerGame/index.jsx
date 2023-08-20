@@ -34,15 +34,16 @@ function ChallengerGame() {
   const isMobile = () => window.innerWidth <= MOBILE_SIZE;
 
   const handleResize = () => {
-    if (isMobile()) {
+    if (isMobile() && isDesktop) {
       setIsDesktop(false);
-    } else {
+    }
+    if (!isMobile() && !isDesktop) {
       setIsDesktop(true);
     }
   };
 
   window.addEventListener('resize', handleResize);
-  useEffect(handleResize, []);
+  useEffect(handleResize, [isDesktop]);
 
   const updateBrushColor = (newColor) => {
     setState({
@@ -148,7 +149,7 @@ function ChallengerGame() {
 
   return (
     <GameContainer className="container">
-      <Header />
+      <Header isDesktop={ isDesktop } />
       {isLoading ? <h1>Loading...</h1> : (
         <section>
           <div>

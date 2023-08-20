@@ -7,6 +7,7 @@ import { MenuItem } from '@mui/material';
 import { ButtonSelect, SelectContainer } from './SelectStyle';
 
 const MOBILE_SIZE = 1000;
+const BOARD_LENGTH_DEFAULT = 3;
 const BOARD_VALUES = ['5', '10', '16'];
 
 function SelectBoard({ valueSize, setValueSize }) {
@@ -16,9 +17,10 @@ function SelectBoard({ valueSize, setValueSize }) {
   const isMobile = () => window.innerWidth <= MOBILE_SIZE;
 
   const handleResize = () => {
-    if (isMobile()) {
+    if (isMobile() && boardValues.length > 2) {
       setBoardValues(['5', '10']);
-    } else {
+    }
+    if (!isMobile() && boardValues.length < BOARD_LENGTH_DEFAULT) {
       setBoardValues(BOARD_VALUES);
     }
   };
@@ -37,7 +39,7 @@ function SelectBoard({ valueSize, setValueSize }) {
     setOpen(true);
   };
 
-  useEffect(handleResize, []);
+  useEffect(handleResize, [boardValues.length]);
 
   return (
     <div>

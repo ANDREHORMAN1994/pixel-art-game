@@ -8,6 +8,7 @@ export const ButtonSelect = styled(Button)`
   font-weight: 300;
   color: #fff;
   width: 100%;
+  margin-bottom: 1rem;
 
   @media (max-width: 1000px) {
     font-size: 0.8rem;

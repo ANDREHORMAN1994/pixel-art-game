@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
+import proptypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { MD5 } from 'crypto-js';
 import { setUser } from '../../redux/slices/user';
@@ -7,8 +8,10 @@ import { writeLocalStorage } from '../../utils/localStorage';
 import { HeaderContainer } from './HeaderStyle';
 
 const GRAVATAR_URL = 'https://www.gravatar.com/avatar/';
+const imgStyleDesktop = { width: 70, height: 70, border: '3px solid white' };
+const imgStyleMobile = { width: 56, height: 56, border: '2px solid white' };
 
-function Header() {
+function Header({ isDesktop }) {
   const [gravatarImg, setGravatarImg] = React.useState(GRAVATAR_URL);
 
   const { name, email, score, assertions } = useSelector((state) => state.user);
@@ -32,7 +35,7 @@ function Header() {
     <HeaderContainer>
       <div>
         <Avatar
-          sx={ { width: 70, height: 70, border: '3px solid white' } }
+          sx={ isDesktop ? imgStyleDesktop : imgStyleMobile }
           src={ gravatarImg }
           alt="Imagem de perfil do usuário"
         />
@@ -42,5 +45,9 @@ function Header() {
     </HeaderContainer>
   );
 }
+
+Header.propTypes = {
+  isDesktop: proptypes.bool.isRequired,
+};
 
 export default Header;

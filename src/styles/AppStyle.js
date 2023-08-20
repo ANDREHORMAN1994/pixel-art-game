@@ -51,6 +51,7 @@ export const Button = styled.button`
   font-weight: bold;
   padding: 2rem;
   border-radius: 5px;
+  box-shadow: 0 0 1rem ${({ theme }) => theme.inputBackground};
   cursor: pointer;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -67,10 +68,10 @@ export const Button = styled.button`
   }
 
   @media (max-width: 700px) {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: lighter;
     text-align: center;
-    padding: 1rem;
+    padding: 1.2rem;
   }
 
   > span {
@@ -103,7 +104,7 @@ export const Input = styled(TextField)`
   input {
     color: ${({ theme }) => theme.textPure};
     caret-color: ${({ theme }) => theme.textPure};
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
     font-weight: bold;
     padding: 1.2rem 2rem;
@@ -115,7 +116,7 @@ export const Input = styled(TextField)`
 
     @media (max-width: 700px) {
       min-width: 10rem;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   
   &:-webkit-autofill,

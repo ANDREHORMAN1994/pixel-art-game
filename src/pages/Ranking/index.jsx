@@ -1,10 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { Avatar } from '@mui/material';
 import { reset } from '../../redux/slices/user';
 import { readLocalStorage } from '../../utils/localStorage';
-import { RankingContainer, RankingUser } from './RankingStyle';
+import { AvatarRanking, RankingContainer, RankingUser } from './RankingStyle';
 import ButtonMui from '../../components/ButtonMui';
 
 function Ranking() {
@@ -27,8 +26,7 @@ function Ranking() {
               <p>
                 {`${index + 1}º`}
               </p>
-              <Avatar
-                sx={ { width: 70, height: 70, border: '3px solid white' } }
+              <AvatarRanking
                 src={ imgGravatar }
                 alt="Imagem de perfil do usuário"
               />
