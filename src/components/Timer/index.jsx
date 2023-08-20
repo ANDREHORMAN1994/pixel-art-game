@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { updateTimer } from '../../redux/slices/game';
 
-const INITIAL_TIMER = 5;
+const INITIAL_TIMER = 60;
 const INTERVAL_SEC = 1000;
 
 let interval;
