@@ -89,6 +89,9 @@ export default function Rules({ open, handleClose }) {
           4️⃣ A cor preta já vem selecionada por padrão, não é preciso
           selecioná-la novamente.
         </Text>
+        <Text gutterBottom>
+          5️⃣ Para apagar o pixel, basta pintar ele de branco novamente.
+        </Text>
       </DialogContent>
       <DialogActions>
         <Button autoFocus onClick={ handleClose }>
