@@ -21,6 +21,11 @@
 ## :bookmark: Sobre
 
 O **Pixel Art Game**  é um jogo desenvolvido para plataformas Desktop e Mobile que proporciona aos jogadores a experiência única de criar pinturas em estilo de 8 ou 16 bits. Agora, você pode elevar o desafio ao pintar quadros pixelados o mais rápido possível, com base em pinturas de referência, visando conquistar mais pontos. Sua pontuação será exibida na tela de classificação, incentivando a competição e o aprimoramento constante.
+<br/>
+
+<p align="center">
+  <img alt="preview do projeto" width="650px" src="./.github/pixel-art-game.gif" />
+<p>
 
 
 ## :computer: Rotas da aplicação
