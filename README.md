@@ -1,6 +1,6 @@
 <h1 align="center">
   <p>PIXEL ART GAME 🎨</p>
-  <p>React JS ⚛️ | Redux Toolkit 🧰 | Styled Components 💅 | Material UI 🎩</p>
+  <p>React JS | Redux Toolkit | MUI + Styled Components</p>
 </h1>
 
 <p align="center">
