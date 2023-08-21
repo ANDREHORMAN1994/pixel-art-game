@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
 import propTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { reset, setUser } from '../../redux/slices/user';
 import { LoginContainer } from './LoginStyle';

@@ -30,6 +30,7 @@
     "react-use": "^17.4.0",
     "styled-components": "^5.3.11",
     "sweetalert2": "^11.7.22",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

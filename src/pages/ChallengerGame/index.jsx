@@ -115,6 +115,7 @@ function ChallengerGame({ setShowConfetti }) {
           const pixel = pixelColors[index];
           if (!pixel) return false;
           if (!p) return false;
+
           return (p.id === pixel.id && p.color === pixel.color);
         });
         showAlert(result);
@@ -132,9 +133,8 @@ function ChallengerGame({ setShowConfetti }) {
       const newDraw = state.boardSize.map((_, index) => {
         const line = [];
         draw.forEach((d) => {
-          const lineId = d.id.length > 2 ? d.id.substring(0, 2) : d.id[0];
-          const verifyLineId = +lineId > index ? +lineId[0] === index : +lineId === index;
-          if (verifyLineId && line.length < pixelSize) line.push(d);
+          const lineId = d.id.split('|')[0];
+          if (+lineId === index) line.push(d);
         });
         return line;
       });

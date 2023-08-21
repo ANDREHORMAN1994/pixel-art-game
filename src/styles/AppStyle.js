@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { TextField } from '@mui/material';
+import { styled as styledMui } from '@mui/system';
+import { Fab, TextField } from '@mui/material';
 import { darken } from 'polished';
 
 export const TitleContainer = styled.div`
@@ -130,4 +131,11 @@ export const Input = styled(TextField)`
       animation: none !important;
     }
   }
+`;
+
+export const IconFab = styledMui(Fab)`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: url('https://fav.farm/👆') 15 0 , auto;
 `;

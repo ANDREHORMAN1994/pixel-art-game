@@ -7,403 +7,403 @@ const draws = [
     screen: 'any',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'white',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'white',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'white',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'white',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'white',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'white',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'white',
       },
       {
-        id: '07',
+        id: '0|7',
         color: 'white',
       },
       {
-        id: '08',
+        id: '0|8',
         color: 'white',
       },
       {
-        id: '09',
+        id: '0|9',
         color: 'white',
       },
       {
-        id: '10',
+        id: '1|0',
         color: 'white',
       },
       {
-        id: '11',
+        id: '1|1',
         color: 'white',
       },
       {
-        id: '12',
+        id: '1|2',
         color: 'red',
       },
       {
-        id: '13',
+        id: '1|3',
         color: 'red',
       },
       {
-        id: '14',
+        id: '1|4',
         color: 'white',
       },
       {
-        id: '15',
+        id: '1|5',
         color: 'white',
       },
       {
-        id: '16',
+        id: '1|6',
         color: 'red',
       },
       {
-        id: '17',
+        id: '1|7',
         color: 'red',
       },
       {
-        id: '18',
+        id: '1|8',
         color: 'white',
       },
       {
-        id: '19',
+        id: '1|9',
         color: 'white',
       },
       {
-        id: '20',
+        id: '2|0',
         color: 'white',
       },
       {
-        id: '21',
+        id: '2|1',
         color: 'red',
       },
       {
-        id: '22',
+        id: '2|2',
         color: 'white',
       },
       {
-        id: '23',
+        id: '2|3',
         color: 'white',
       },
       {
-        id: '24',
+        id: '2|4',
         color: 'red',
       },
       {
-        id: '25',
+        id: '2|5',
         color: 'red',
       },
       {
-        id: '26',
+        id: '2|6',
         color: 'red',
       },
       {
-        id: '27',
+        id: '2|7',
         color: 'red',
       },
       {
-        id: '28',
+        id: '2|8',
         color: 'red',
       },
       {
-        id: '29',
+        id: '2|9',
         color: 'white',
       },
       {
-        id: '30',
+        id: '3|0',
         color: 'white',
       },
       {
-        id: '31',
+        id: '3|1',
         color: 'red',
       },
       {
-        id: '32',
+        id: '3|2',
         color: 'white',
       },
       {
-        id: '33',
+        id: '3|3',
         color: 'red',
       },
       {
-        id: '34',
+        id: '3|4',
         color: 'red',
       },
       {
-        id: '35',
+        id: '3|5',
         color: 'red',
       },
       {
-        id: '36',
+        id: '3|6',
         color: 'red',
       },
       {
-        id: '37',
+        id: '3|7',
         color: 'red',
       },
       {
-        id: '38',
+        id: '3|8',
         color: 'red',
       },
       {
-        id: '39',
+        id: '3|9',
         color: 'white',
       },
       {
-        id: '40',
+        id: '4|0',
         color: 'white',
       },
       {
-        id: '41',
+        id: '4|1',
         color: 'red',
       },
       {
-        id: '42',
+        id: '4|2',
         color: 'red',
       },
       {
-        id: '43',
+        id: '4|3',
         color: 'red',
       },
       {
-        id: '44',
+        id: '4|4',
         color: 'red',
       },
       {
-        id: '45',
+        id: '4|5',
         color: 'red',
       },
       {
-        id: '46',
+        id: '4|6',
         color: 'red',
       },
       {
-        id: '47',
+        id: '4|7',
         color: 'red',
       },
       {
-        id: '48',
+        id: '4|8',
         color: 'red',
       },
       {
-        id: '49',
+        id: '4|9',
         color: 'white',
       },
       {
-        id: '50',
+        id: '5|0',
         color: 'white',
       },
       {
-        id: '51',
+        id: '5|1',
         color: 'black',
       },
       {
-        id: '52',
+        id: '5|2',
         color: 'red',
       },
       {
-        id: '53',
+        id: '5|3',
         color: 'red',
       },
       {
-        id: '54',
+        id: '5|4',
         color: 'red',
       },
       {
-        id: '55',
+        id: '5|5',
         color: 'red',
       },
       {
-        id: '56',
+        id: '5|6',
         color: 'red',
       },
       {
-        id: '57',
+        id: '5|7',
         color: 'red',
       },
       {
-        id: '58',
+        id: '5|8',
         color: 'black',
       },
       {
-        id: '59',
+        id: '5|9',
         color: 'white',
       },
       {
-        id: '60',
+        id: '6|0',
         color: 'white',
       },
       {
-        id: '61',
+        id: '6|1',
         color: 'white',
       },
       {
-        id: '62',
+        id: '6|2',
         color: 'black',
       },
       {
-        id: '63',
+        id: '6|3',
         color: 'red',
       },
       {
-        id: '64',
+        id: '6|4',
         color: 'red',
       },
       {
-        id: '65',
+        id: '6|5',
         color: 'red',
       },
       {
-        id: '66',
+        id: '6|6',
         color: 'red',
       },
       {
-        id: '67',
+        id: '6|7',
         color: 'black',
       },
       {
-        id: '68',
+        id: '6|8',
         color: 'white',
       },
       {
-        id: '69',
+        id: '6|9',
         color: 'white',
       },
       {
-        id: '70',
+        id: '7|0',
         color: 'white',
       },
       {
-        id: '71',
+        id: '7|1',
         color: 'white',
       },
       {
-        id: '72',
+        id: '7|2',
         color: 'white',
       },
       {
-        id: '73',
+        id: '7|3',
         color: 'black',
       },
       {
-        id: '74',
+        id: '7|4',
         color: 'red',
       },
       {
-        id: '75',
+        id: '7|5',
         color: 'red',
       },
       {
-        id: '76',
+        id: '7|6',
         color: 'black',
       },
       {
-        id: '77',
+        id: '7|7',
         color: 'white',
       },
       {
-        id: '78',
+        id: '7|8',
         color: 'white',
       },
       {
-        id: '79',
+        id: '7|9',
         color: 'white',
       },
       {
-        id: '80',
+        id: '8|0',
         color: 'white',
       },
       {
-        id: '81',
+        id: '8|1',
         color: 'white',
       },
       {
-        id: '82',
+        id: '8|2',
         color: 'white',
       },
       {
-        id: '83',
+        id: '8|3',
         color: 'white',
       },
       {
-        id: '84',
+        id: '8|4',
         color: 'black',
       },
       {
-        id: '85',
+        id: '8|5',
         color: 'black',
       },
       {
-        id: '86',
+        id: '8|6',
         color: 'white',
       },
       {
-        id: '87',
+        id: '8|7',
         color: 'white',
       },
       {
-        id: '88',
+        id: '8|8',
         color: 'white',
       },
       {
-        id: '89',
+        id: '8|9',
         color: 'white',
       },
       {
-        id: '90',
+        id: '9|0',
         color: 'white',
       },
       {
-        id: '91',
+        id: '9|1',
         color: 'white',
       },
       {
-        id: '92',
+        id: '9|2',
         color: 'white',
       },
       {
-        id: '93',
+        id: '9|3',
         color: 'white',
       },
       {
-        id: '94',
+        id: '9|4',
         color: 'white',
       },
       {
-        id: '95',
+        id: '9|5',
         color: 'white',
       },
       {
-        id: '96',
+        id: '9|6',
         color: 'white',
       },
       {
-        id: '97',
+        id: '9|7',
         color: 'white',
       },
       {
-        id: '98',
+        id: '9|8',
         color: 'white',
       },
       {
-        id: '99',
+        id: '9|9',
         color: 'white',
       },
     ],
@@ -416,403 +416,403 @@ const draws = [
     screen: 'any',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'white',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'white',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'white',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'white',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'white',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'white',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'white',
       },
       {
-        id: '07',
+        id: '0|7',
         color: 'white',
       },
       {
-        id: '08',
+        id: '0|8',
         color: 'white',
       },
       {
-        id: '09',
+        id: '0|9',
         color: 'white',
       },
       {
-        id: '10',
+        id: '1|0',
         color: 'white',
       },
       {
-        id: '11',
+        id: '1|1',
         color: 'white',
       },
       {
-        id: '12',
+        id: '1|2',
         color: 'white',
       },
       {
-        id: '13',
+        id: '1|3',
         color: 'black',
       },
       {
-        id: '14',
+        id: '1|4',
         color: 'black',
       },
       {
-        id: '15',
+        id: '1|5',
         color: 'black',
       },
       {
-        id: '16',
+        id: '1|6',
         color: 'black',
       },
       {
-        id: '17',
+        id: '1|7',
         color: 'white',
       },
       {
-        id: '18',
+        id: '1|8',
         color: 'white',
       },
       {
-        id: '19',
+        id: '1|9',
         color: 'white',
       },
       {
-        id: '20',
+        id: '2|0',
         color: 'white',
       },
       {
-        id: '21',
+        id: '2|1',
         color: 'white',
       },
       {
-        id: '22',
+        id: '2|2',
         color: 'black',
       },
       {
-        id: '23',
+        id: '2|3',
         color: 'red',
       },
       {
-        id: '24',
+        id: '2|4',
         color: 'red',
       },
       {
-        id: '25',
+        id: '2|5',
         color: 'red',
       },
       {
-        id: '26',
+        id: '2|6',
         color: 'red',
       },
       {
-        id: '27',
+        id: '2|7',
         color: 'black',
       },
       {
-        id: '28',
+        id: '2|8',
         color: 'white',
       },
       {
-        id: '29',
+        id: '2|9',
         color: 'white',
       },
       {
-        id: '30',
+        id: '3|0',
         color: 'white',
       },
       {
-        id: '31',
+        id: '3|1',
         color: 'black',
       },
       {
-        id: '32',
+        id: '3|2',
         color: 'red',
       },
       {
-        id: '33',
+        id: '3|3',
         color: 'red',
       },
       {
-        id: '34',
+        id: '3|4',
         color: 'red',
       },
       {
-        id: '35',
+        id: '3|5',
         color: 'red',
       },
       {
-        id: '36',
+        id: '3|6',
         color: 'red',
       },
       {
-        id: '37',
+        id: '3|7',
         color: 'red',
       },
       {
-        id: '38',
+        id: '3|8',
         color: 'black',
       },
       {
-        id: '39',
+        id: '3|9',
         color: 'white',
       },
       {
-        id: '40',
+        id: '4|0',
         color: 'white',
       },
       {
-        id: '41',
+        id: '4|1',
         color: 'black',
       },
       {
-        id: '42',
+        id: '4|2',
         color: 'red',
       },
       {
-        id: '43',
+        id: '4|3',
         color: 'red',
       },
       {
-        id: '44',
+        id: '4|4',
         color: 'black',
       },
       {
-        id: '45',
+        id: '4|5',
         color: 'black',
       },
       {
-        id: '46',
+        id: '4|6',
         color: 'red',
       },
       {
-        id: '47',
+        id: '4|7',
         color: 'red',
       },
       {
-        id: '48',
+        id: '4|8',
         color: 'black',
       },
       {
-        id: '49',
+        id: '4|9',
         color: 'white',
       },
       {
-        id: '50',
+        id: '5|0',
         color: 'white',
       },
       {
-        id: '51',
+        id: '5|1',
         color: 'black',
       },
       {
-        id: '52',
+        id: '5|2',
         color: 'black',
       },
       {
-        id: '53',
+        id: '5|3',
         color: 'black',
       },
       {
-        id: '54',
+        id: '5|4',
         color: 'white',
       },
       {
-        id: '55',
+        id: '5|5',
         color: 'white',
       },
       {
-        id: '56',
+        id: '5|6',
         color: 'black',
       },
       {
-        id: '57',
+        id: '5|7',
         color: 'black',
       },
       {
-        id: '58',
+        id: '5|8',
         color: 'black',
       },
       {
-        id: '59',
+        id: '5|9',
         color: 'white',
       },
       {
-        id: '60',
+        id: '6|0',
         color: 'white',
       },
       {
-        id: '61',
+        id: '6|1',
         color: 'black',
       },
       {
-        id: '62',
+        id: '6|2',
         color: 'white',
       },
       {
-        id: '63',
+        id: '6|3',
         color: 'white',
       },
       {
-        id: '64',
+        id: '6|4',
         color: 'black',
       },
       {
-        id: '65',
+        id: '6|5',
         color: 'black',
       },
       {
-        id: '66',
+        id: '6|6',
         color: 'white',
       },
       {
-        id: '67',
+        id: '6|7',
         color: 'white',
       },
       {
-        id: '68',
+        id: '6|8',
         color: 'black',
       },
       {
-        id: '69',
+        id: '6|9',
         color: 'white',
       },
       {
-        id: '70',
+        id: '7|0',
         color: 'white',
       },
       {
-        id: '71',
+        id: '7|1',
         color: 'white',
       },
       {
-        id: '72',
+        id: '7|2',
         color: 'black',
       },
       {
-        id: '73',
+        id: '7|3',
         color: 'white',
       },
       {
-        id: '74',
+        id: '7|4',
         color: 'white',
       },
       {
-        id: '75',
+        id: '7|5',
         color: 'white',
       },
       {
-        id: '76',
+        id: '7|6',
         color: 'white',
       },
       {
-        id: '77',
+        id: '7|7',
         color: 'black',
       },
       {
-        id: '78',
+        id: '7|8',
         color: 'white',
       },
       {
-        id: '79',
+        id: '7|9',
         color: 'white',
       },
       {
-        id: '80',
+        id: '8|0',
         color: 'white',
       },
       {
-        id: '81',
+        id: '8|1',
         color: 'white',
       },
       {
-        id: '82',
+        id: '8|2',
         color: 'white',
       },
       {
-        id: '83',
+        id: '8|3',
         color: 'black',
       },
       {
-        id: '84',
+        id: '8|4',
         color: 'black',
       },
       {
-        id: '85',
+        id: '8|5',
         color: 'black',
       },
       {
-        id: '86',
+        id: '8|6',
         color: 'black',
       },
       {
-        id: '87',
+        id: '8|7',
         color: 'white',
       },
       {
-        id: '88',
+        id: '8|8',
         color: 'white',
       },
       {
-        id: '89',
+        id: '8|9',
         color: 'white',
       },
       {
-        id: '90',
+        id: '9|0',
         color: 'white',
       },
       {
-        id: '91',
+        id: '9|1',
         color: 'white',
       },
       {
-        id: '92',
+        id: '9|2',
         color: 'white',
       },
       {
-        id: '93',
+        id: '9|3',
         color: 'white',
       },
       {
-        id: '94',
+        id: '9|4',
         color: 'white',
       },
       {
-        id: '95',
+        id: '9|5',
         color: 'white',
       },
       {
-        id: '96',
+        id: '9|6',
         color: 'white',
       },
       {
-        id: '97',
+        id: '9|7',
         color: 'white',
       },
       {
-        id: '98',
+        id: '9|8',
         color: 'white',
       },
       {
-        id: '99',
+        id: '9|9',
         color: 'white',
       },
     ],
@@ -825,403 +825,403 @@ const draws = [
     screen: 'any',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'white',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'white',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'white',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'white',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'white',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'white',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'white',
       },
       {
-        id: '07',
+        id: '0|7',
         color: 'white',
       },
       {
-        id: '08',
+        id: '0|8',
         color: 'white',
       },
       {
-        id: '09',
+        id: '0|9',
         color: 'white',
       },
       {
-        id: '10',
+        id: '1|0',
         color: 'white',
       },
       {
-        id: '11',
+        id: '1|1',
         color: 'white',
       },
       {
-        id: '12',
+        id: '1|2',
         color: 'white',
       },
       {
-        id: '13',
+        id: '1|3',
         color: 'blue',
       },
       {
-        id: '14',
+        id: '1|4',
         color: 'blue',
       },
       {
-        id: '15',
+        id: '1|5',
         color: 'blue',
       },
       {
-        id: '16',
+        id: '1|6',
         color: 'blue',
       },
       {
-        id: '17',
+        id: '1|7',
         color: 'white',
       },
       {
-        id: '18',
+        id: '1|8',
         color: 'white',
       },
       {
-        id: '19',
+        id: '1|9',
         color: 'white',
       },
       {
-        id: '20',
+        id: '2|0',
         color: 'white',
       },
       {
-        id: '21',
+        id: '2|1',
         color: 'white',
       },
       {
-        id: '22',
+        id: '2|2',
         color: 'blue',
       },
       {
-        id: '23',
+        id: '2|3',
         color: 'blue',
       },
       {
-        id: '24',
+        id: '2|4',
         color: 'blue',
       },
       {
-        id: '25',
+        id: '2|5',
         color: 'blue',
       },
       {
-        id: '26',
+        id: '2|6',
         color: 'blue',
       },
       {
-        id: '27',
+        id: '2|7',
         color: 'blue',
       },
       {
-        id: '28',
+        id: '2|8',
         color: 'white',
       },
       {
-        id: '29',
+        id: '2|9',
         color: 'white',
       },
       {
-        id: '30',
+        id: '3|0',
         color: 'white',
       },
       {
-        id: '31',
+        id: '3|1',
         color: 'blue',
       },
       {
-        id: '32',
+        id: '3|2',
         color: 'blue',
       },
       {
-        id: '33',
+        id: '3|3',
         color: 'white',
       },
       {
-        id: '34',
+        id: '3|4',
         color: 'white',
       },
       {
-        id: '35',
+        id: '3|5',
         color: 'blue',
       },
       {
-        id: '36',
+        id: '3|6',
         color: 'white',
       },
       {
-        id: '37',
+        id: '3|7',
         color: 'white',
       },
       {
-        id: '38',
+        id: '3|8',
         color: 'blue',
       },
       {
-        id: '39',
+        id: '3|9',
         color: 'white',
       },
       {
-        id: '40',
+        id: '4|0',
         color: 'white',
       },
       {
-        id: '41',
+        id: '4|1',
         color: 'blue',
       },
       {
-        id: '42',
+        id: '4|2',
         color: 'blue',
       },
       {
-        id: '43',
+        id: '4|3',
         color: 'white',
       },
       {
-        id: '44',
+        id: '4|4',
         color: 'black',
       },
       {
-        id: '45',
+        id: '4|5',
         color: 'blue',
       },
       {
-        id: '46',
+        id: '4|6',
         color: 'white',
       },
       {
-        id: '47',
+        id: '4|7',
         color: 'black',
       },
       {
-        id: '48',
+        id: '4|8',
         color: 'blue',
       },
       {
-        id: '49',
+        id: '4|9',
         color: 'white',
       },
       {
-        id: '50',
+        id: '5|0',
         color: 'white',
       },
       {
-        id: '51',
+        id: '5|1',
         color: 'blue',
       },
       {
-        id: '52',
+        id: '5|2',
         color: 'blue',
       },
       {
-        id: '53',
+        id: '5|3',
         color: 'blue',
       },
       {
-        id: '54',
+        id: '5|4',
         color: 'blue',
       },
       {
-        id: '55',
+        id: '5|5',
         color: 'blue',
       },
       {
-        id: '56',
+        id: '5|6',
         color: 'blue',
       },
       {
-        id: '57',
+        id: '5|7',
         color: 'blue',
       },
       {
-        id: '58',
+        id: '5|8',
         color: 'blue',
       },
       {
-        id: '59',
+        id: '5|9',
         color: 'white',
       },
       {
-        id: '60',
+        id: '6|0',
         color: 'white',
       },
       {
-        id: '61',
+        id: '6|1',
         color: 'blue',
       },
       {
-        id: '62',
+        id: '6|2',
         color: 'blue',
       },
       {
-        id: '63',
+        id: '6|3',
         color: 'blue',
       },
       {
-        id: '64',
+        id: '6|4',
         color: 'blue',
       },
       {
-        id: '65',
+        id: '6|5',
         color: 'blue',
       },
       {
-        id: '66',
+        id: '6|6',
         color: 'blue',
       },
       {
-        id: '67',
+        id: '6|7',
         color: 'blue',
       },
       {
-        id: '68',
+        id: '6|8',
         color: 'blue',
       },
       {
-        id: '69',
+        id: '6|9',
         color: 'white',
       },
       {
-        id: '70',
+        id: '7|0',
         color: 'white',
       },
       {
-        id: '71',
+        id: '7|1',
         color: 'blue',
       },
       {
-        id: '72',
+        id: '7|2',
         color: 'blue',
       },
       {
-        id: '73',
+        id: '7|3',
         color: 'blue',
       },
       {
-        id: '74',
+        id: '7|4',
         color: 'blue',
       },
       {
-        id: '75',
+        id: '7|5',
         color: 'blue',
       },
       {
-        id: '76',
+        id: '7|6',
         color: 'blue',
       },
       {
-        id: '77',
+        id: '7|7',
         color: 'blue',
       },
       {
-        id: '78',
+        id: '7|8',
         color: 'blue',
       },
       {
-        id: '79',
+        id: '7|9',
         color: 'white',
       },
       {
-        id: '80',
+        id: '8|0',
         color: 'white',
       },
       {
-        id: '81',
+        id: '8|1',
         color: 'blue',
       },
       {
-        id: '82',
+        id: '8|2',
         color: 'blue',
       },
       {
-        id: '83',
+        id: '8|3',
         color: 'white',
       },
       {
-        id: '84',
+        id: '8|4',
         color: 'blue',
       },
       {
-        id: '85',
+        id: '8|5',
         color: 'blue',
       },
       {
-        id: '86',
+        id: '8|6',
         color: 'white',
       },
       {
-        id: '87',
+        id: '8|7',
         color: 'blue',
       },
       {
-        id: '88',
+        id: '8|8',
         color: 'blue',
       },
       {
-        id: '89',
+        id: '8|9',
         color: 'white',
       },
       {
-        id: '90',
+        id: '9|0',
         color: 'white',
       },
       {
-        id: '91',
+        id: '9|1',
         color: 'white',
       },
       {
-        id: '92',
+        id: '9|2',
         color: 'white',
       },
       {
-        id: '93',
+        id: '9|3',
         color: 'white',
       },
       {
-        id: '94',
+        id: '9|4',
         color: 'white',
       },
       {
-        id: '95',
+        id: '9|5',
         color: 'white',
       },
       {
-        id: '96',
+        id: '9|6',
         color: 'white',
       },
       {
-        id: '97',
+        id: '9|7',
         color: 'white',
       },
       {
-        id: '98',
+        id: '9|8',
         color: 'white',
       },
       {
-        id: '99',
+        id: '9|9',
         color: 'white',
       },
     ],
@@ -1234,403 +1234,403 @@ const draws = [
     screen: 'any',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'black',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'black',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'black',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'black',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'black',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'black',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'black',
       },
       {
-        id: '07',
+        id: '0|7',
         color: 'black',
       },
       {
-        id: '08',
+        id: '0|8',
         color: 'black',
       },
       {
-        id: '09',
+        id: '0|9',
         color: 'black',
       },
       {
-        id: '10',
+        id: '1|0',
         color: 'black',
       },
       {
-        id: '11',
+        id: '1|1',
         color: 'white',
       },
       {
-        id: '12',
+        id: '1|2',
         color: 'white',
       },
       {
-        id: '13',
+        id: '1|3',
         color: 'white',
       },
       {
-        id: '14',
+        id: '1|4',
         color: 'white',
       },
       {
-        id: '15',
+        id: '1|5',
         color: 'white',
       },
       {
-        id: '16',
+        id: '1|6',
         color: 'white',
       },
       {
-        id: '17',
+        id: '1|7',
         color: 'white',
       },
       {
-        id: '18',
+        id: '1|8',
         color: 'white',
       },
       {
-        id: '19',
+        id: '1|9',
         color: 'black',
       },
       {
-        id: '20',
+        id: '2|0',
         color: 'black',
       },
       {
-        id: '21',
+        id: '2|1',
         color: 'white',
       },
       {
-        id: '22',
-        color: 'white',
-      },
-      {
-        id: '23',
-        color: 'white',
-      },
-      {
-        id: '24',
-        color: 'white',
-      },
-      {
-        id: '25',
-        color: 'white',
-      },
-      {
-        id: '26',
-        color: 'white',
-      },
-      {
-        id: '27',
-        color: 'white',
-      },
-      {
-        id: '28',
-        color: 'white',
-      },
-      {
-        id: '29',
+        id: '2|2',
         color: 'black',
       },
       {
-        id: '30',
+        id: '2|3',
         color: 'black',
       },
       {
-        id: '31',
+        id: '2|4',
         color: 'white',
       },
       {
-        id: '32',
-        color: 'black',
-      },
-      {
-        id: '33',
-        color: 'black',
-      },
-      {
-        id: '34',
+        id: '2|5',
         color: 'white',
       },
       {
-        id: '35',
+        id: '2|6',
+        color: 'black',
+      },
+      {
+        id: '2|7',
+        color: 'black',
+      },
+      {
+        id: '2|8',
         color: 'white',
       },
       {
-        id: '36',
+        id: '2|9',
         color: 'black',
       },
       {
-        id: '37',
+        id: '3|0',
         color: 'black',
       },
       {
-        id: '38',
+        id: '3|1',
         color: 'white',
       },
       {
-        id: '39',
+        id: '3|2',
         color: 'black',
       },
       {
-        id: '40',
+        id: '3|3',
         color: 'black',
       },
       {
-        id: '41',
+        id: '3|4',
         color: 'white',
       },
       {
-        id: '42',
-        color: 'black',
-      },
-      {
-        id: '43',
-        color: 'black',
-      },
-      {
-        id: '44',
+        id: '3|5',
         color: 'white',
       },
       {
-        id: '45',
+        id: '3|6',
+        color: 'black',
+      },
+      {
+        id: '3|7',
+        color: 'black',
+      },
+      {
+        id: '3|8',
         color: 'white',
       },
       {
-        id: '46',
+        id: '3|9',
         color: 'black',
       },
       {
-        id: '47',
+        id: '4|0',
         color: 'black',
       },
       {
-        id: '48',
+        id: '4|1',
         color: 'white',
       },
       {
-        id: '49',
-        color: 'black',
-      },
-      {
-        id: '50',
-        color: 'black',
-      },
-      {
-        id: '51',
+        id: '4|2',
         color: 'white',
       },
       {
-        id: '52',
+        id: '4|3',
         color: 'white',
       },
       {
-        id: '53',
+        id: '4|4',
         color: 'white',
       },
       {
-        id: '54',
+        id: '4|5',
         color: 'white',
       },
       {
-        id: '55',
+        id: '4|6',
         color: 'white',
       },
       {
-        id: '56',
+        id: '4|7',
         color: 'white',
       },
       {
-        id: '57',
+        id: '4|8',
         color: 'white',
       },
       {
-        id: '58',
+        id: '4|9',
+        color: 'black',
+      },
+      {
+        id: '5|0',
+        color: 'black',
+      },
+      {
+        id: '5|1',
         color: 'white',
       },
       {
-        id: '59',
-        color: 'black',
-      },
-      {
-        id: '60',
-        color: 'black',
-      },
-      {
-        id: '61',
+        id: '5|2',
         color: 'white',
       },
       {
-        id: '62',
+        id: '5|3',
         color: 'white',
       },
       {
-        id: '63',
+        id: '5|4',
+        color: 'black',
+      },
+      {
+        id: '5|5',
+        color: 'black',
+      },
+      {
+        id: '5|6',
         color: 'white',
       },
       {
-        id: '64',
-        color: 'black',
-      },
-      {
-        id: '65',
-        color: 'black',
-      },
-      {
-        id: '66',
+        id: '5|7',
         color: 'white',
       },
       {
-        id: '67',
+        id: '5|8',
         color: 'white',
       },
       {
-        id: '68',
+        id: '5|9',
+        color: 'black',
+      },
+      {
+        id: '6|0',
+        color: 'black',
+      },
+      {
+        id: '6|1',
+        color: 'black',
+      },
+      {
+        id: '6|2',
         color: 'white',
       },
       {
-        id: '69',
-        color: 'black',
-      },
-      {
-        id: '70',
-        color: 'black',
-      },
-      {
-        id: '71',
-        color: 'black',
-      },
-      {
-        id: '72',
+        id: '6|3',
         color: 'white',
       },
       {
-        id: '73',
+        id: '6|4',
         color: 'white',
       },
       {
-        id: '74',
+        id: '6|5',
         color: 'white',
       },
       {
-        id: '75',
+        id: '6|6',
         color: 'white',
       },
       {
-        id: '76',
+        id: '6|7',
         color: 'white',
       },
       {
-        id: '77',
+        id: '6|8',
+        color: 'black',
+      },
+      {
+        id: '6|9',
+        color: 'black',
+      },
+      {
+        id: '7|0',
+        color: 'black',
+      },
+      {
+        id: '7|1',
+        color: 'black',
+      },
+      {
+        id: '7|2',
         color: 'white',
       },
       {
-        id: '78',
-        color: 'black',
-      },
-      {
-        id: '79',
-        color: 'black',
-      },
-      {
-        id: '80',
-        color: 'black',
-      },
-      {
-        id: '81',
-        color: 'black',
-      },
-      {
-        id: '82',
+        id: '7|3',
         color: 'white',
       },
       {
-        id: '83',
-        color: 'black',
-      },
-      {
-        id: '84',
+        id: '7|4',
         color: 'white',
       },
       {
-        id: '85',
+        id: '7|5',
         color: 'white',
       },
       {
-        id: '86',
-        color: 'black',
-      },
-      {
-        id: '87',
+        id: '7|6',
         color: 'white',
       },
       {
-        id: '88',
+        id: '7|7',
+        color: 'white',
+      },
+      {
+        id: '7|8',
         color: 'black',
       },
       {
-        id: '89',
+        id: '7|9',
         color: 'black',
       },
       {
-        id: '90',
+        id: '8|0',
         color: 'black',
       },
       {
-        id: '91',
+        id: '8|1',
         color: 'black',
       },
       {
-        id: '92',
+        id: '8|2',
+        color: 'white',
+      },
+      {
+        id: '8|3',
         color: 'black',
       },
       {
-        id: '93',
+        id: '8|4',
+        color: 'white',
+      },
+      {
+        id: '8|5',
+        color: 'white',
+      },
+      {
+        id: '8|6',
         color: 'black',
       },
       {
-        id: '94',
+        id: '8|7',
+        color: 'white',
+      },
+      {
+        id: '8|8',
         color: 'black',
       },
       {
-        id: '95',
+        id: '8|9',
         color: 'black',
       },
       {
-        id: '96',
+        id: '9|0',
         color: 'black',
       },
       {
-        id: '97',
+        id: '9|1',
         color: 'black',
       },
       {
-        id: '98',
+        id: '9|2',
         color: 'black',
       },
       {
-        id: '99',
+        id: '9|3',
+        color: 'black',
+      },
+      {
+        id: '9|4',
+        color: 'black',
+      },
+      {
+        id: '9|5',
+        color: 'black',
+      },
+      {
+        id: '9|6',
+        color: 'black',
+      },
+      {
+        id: '9|7',
+        color: 'black',
+      },
+      {
+        id: '9|8',
+        color: 'black',
+      },
+      {
+        id: '9|9',
         color: 'black',
       },
     ],
@@ -1643,571 +1643,579 @@ const draws = [
     screen: 'desktop',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'white',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'white',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'white',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'white',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'white',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'white',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'white',
       },
       {
-        id: '10',
+        id: '0|7',
         color: 'white',
       },
       {
-        id: '11',
+        id: '0|8',
         color: 'white',
       },
       {
-        id: '12',
+        id: '0|9',
         color: 'white',
       },
       {
-        id: '13',
+        id: '0|10',
+        color: 'white',
+      },
+      {
+        id: '0|11',
+        color: 'white',
+      },
+      {
+        id: '1|0',
+        color: 'white',
+      },
+      {
+        id: '1|1',
+        color: 'white',
+      },
+      {
+        id: '1|2',
+        color: 'white',
+      },
+      {
+        id: '1|3',
         color: 'black',
       },
       {
-        id: '14',
+        id: '1|4',
         color: 'black',
       },
       {
-        id: '15',
+        id: '1|5',
         color: 'black',
       },
       {
-        id: '16',
+        id: '1|6',
         color: 'black',
       },
       {
-        id: '20',
+        id: '1|7',
+        color: 'black',
+      },
+      {
+        id: '1|8',
+        color: 'black',
+      },
+      {
+        id: '1|9',
         color: 'white',
       },
       {
-        id: '21',
+        id: '1|10',
         color: 'white',
       },
       {
-        id: '22',
+        id: '1|11',
+        color: 'white',
+      },
+      {
+        id: '2|0',
+        color: 'white',
+      },
+      {
+        id: '2|1',
+        color: 'white',
+      },
+      {
+        id: '2|2',
         color: 'black',
       },
       {
-        id: '23',
+        id: '2|3',
         color: 'red',
       },
       {
-        id: '24',
+        id: '2|4',
         color: 'red',
       },
       {
-        id: '25',
+        id: '2|5',
         color: 'red',
       },
       {
-        id: '26',
+        id: '2|6',
         color: 'red',
       },
       {
-        id: '30',
-        color: 'white',
-      },
-      {
-        id: '31',
-        color: 'black',
-      },
-      {
-        id: '32',
+        id: '2|7',
         color: 'red',
       },
       {
-        id: '33',
+        id: '2|8',
+        color: 'white',
+      },
+      {
+        id: '2|9',
+        color: 'black',
+      },
+      {
+        id: '2|10',
+        color: 'white',
+      },
+      {
+        id: '2|11',
+        color: 'white',
+      },
+      {
+        id: '3|0',
+        color: 'white',
+      },
+      {
+        id: '3|1',
+        color: 'black',
+      },
+      {
+        id: '3|2',
         color: 'red',
       },
       {
-        id: '34',
+        id: '3|3',
         color: 'red',
       },
       {
-        id: '35',
-        color: 'white',
-      },
-      {
-        id: '36',
-        color: 'white',
-      },
-      {
-        id: '40',
-        color: 'white',
-      },
-      {
-        id: '41',
-        color: 'black',
-      },
-      {
-        id: '42',
+        id: '3|4',
         color: 'red',
       },
       {
-        id: '43',
+        id: '3|5',
+        color: 'white',
+      },
+      {
+        id: '3|6',
+        color: 'white',
+      },
+      {
+        id: '3|7',
         color: 'red',
       },
       {
-        id: '44',
+        id: '3|8',
+        color: 'white',
+      },
+      {
+        id: '3|9',
+        color: 'white',
+      },
+      {
+        id: '3|10',
+        color: 'black',
+      },
+      {
+        id: '3|11',
+        color: 'white',
+      },
+      {
+        id: '4|0',
+        color: 'white',
+      },
+      {
+        id: '4|1',
+        color: 'black',
+      },
+      {
+        id: '4|2',
         color: 'red',
       },
       {
-        id: '45',
-        color: 'white',
-      },
-      {
-        id: '46',
-        color: 'white',
-      },
-      {
-        id: '50',
-        color: 'white',
-      },
-      {
-        id: '51',
-        color: 'black',
-      },
-      {
-        id: '52',
-        color: 'white',
-      },
-      {
-        id: '53',
+        id: '4|3',
         color: 'red',
       },
       {
-        id: '54',
+        id: '4|4',
         color: 'red',
       },
       {
-        id: '55',
+        id: '4|5',
+        color: 'white',
+      },
+      {
+        id: '4|6',
+        color: 'white',
+      },
+      {
+        id: '4|7',
         color: 'red',
       },
       {
-        id: '56',
+        id: '4|8',
         color: 'red',
       },
       {
-        id: '60',
-        color: 'white',
-      },
-      {
-        id: '61',
-        color: 'black',
-      },
-      {
-        id: '62',
-        color: 'white',
-      },
-      {
-        id: '63',
-        color: 'white',
-      },
-      {
-        id: '64',
+        id: '4|9',
         color: 'red',
       },
       {
-        id: '65',
+        id: '4|10',
+        color: 'black',
+      },
+      {
+        id: '4|11',
+        color: 'white',
+      },
+      {
+        id: '5|0',
+        color: 'white',
+      },
+      {
+        id: '5|1',
+        color: 'black',
+      },
+      {
+        id: '5|2',
+        color: 'white',
+      },
+      {
+        id: '5|3',
         color: 'red',
       },
       {
-        id: '66',
+        id: '5|4',
         color: 'red',
       },
       {
-        id: '07',
-        color: 'white',
-      },
-      {
-        id: '08',
-        color: 'white',
-      },
-      {
-        id: '09',
-        color: 'white',
-      },
-      {
-        id: '17',
-        color: 'black',
-      },
-      {
-        id: '18',
-        color: 'black',
-      },
-      {
-        id: '19',
-        color: 'white',
-      },
-      {
-        id: '27',
+        id: '5|5',
         color: 'red',
       },
       {
-        id: '28',
-        color: 'white',
-      },
-      {
-        id: '29',
-        color: 'black',
-      },
-      {
-        id: '37',
+        id: '5|6',
         color: 'red',
       },
       {
-        id: '38',
-        color: 'white',
-      },
-      {
-        id: '39',
-        color: 'white',
-      },
-      {
-        id: '47',
+        id: '5|7',
         color: 'red',
       },
       {
-        id: '48',
+        id: '5|8',
+        color: 'white',
+      },
+      {
+        id: '5|9',
         color: 'red',
       },
       {
-        id: '49',
+        id: '5|10',
+        color: 'black',
+      },
+      {
+        id: '5|11',
+        color: 'white',
+      },
+      {
+        id: '6|0',
+        color: 'white',
+      },
+      {
+        id: '6|1',
+        color: 'black',
+      },
+      {
+        id: '6|2',
+        color: 'white',
+      },
+      {
+        id: '6|3',
+        color: 'white',
+      },
+      {
+        id: '6|4',
         color: 'red',
       },
       {
-        id: '57',
+        id: '6|5',
         color: 'red',
       },
       {
-        id: '58',
-        color: 'white',
-      },
-      {
-        id: '59',
+        id: '6|6',
         color: 'red',
       },
       {
-        id: '67',
+        id: '6|7',
         color: 'red',
       },
       {
-        id: '68',
+        id: '6|8',
         color: 'red',
       },
       {
-        id: '69',
+        id: '6|9',
         color: 'red',
       },
       {
-        id: '70',
-        color: 'white',
-      },
-      {
-        id: '71',
+        id: '6|10',
         color: 'black',
       },
       {
-        id: '72',
+        id: '6|11',
+        color: 'white',
+      },
+      {
+        id: '7|0',
+        color: 'white',
+      },
+      {
+        id: '7|1',
         color: 'black',
       },
       {
-        id: '73',
-        color: 'white',
-      },
-      {
-        id: '74',
+        id: '7|2',
         color: 'black',
       },
       {
-        id: '75',
+        id: '7|3',
         color: 'white',
       },
       {
-        id: '76',
-        color: 'white',
-      },
-      {
-        id: '77',
+        id: '7|4',
         color: 'black',
       },
       {
-        id: '78',
+        id: '7|5',
         color: 'white',
       },
       {
-        id: '79',
+        id: '7|6',
+        color: 'white',
+      },
+      {
+        id: '7|7',
         color: 'black',
       },
       {
-        id: '80',
+        id: '7|8',
         color: 'white',
       },
       {
-        id: '81',
-        color: 'white',
-      },
-      {
-        id: '82',
+        id: '7|9',
         color: 'black',
       },
       {
-        id: '83',
-        color: 'white',
-      },
-      {
-        id: '84',
+        id: '7|10',
         color: 'black',
       },
       {
-        id: '85',
+        id: '7|11',
         color: 'white',
       },
       {
-        id: '86',
+        id: '8|0',
         color: 'white',
       },
       {
-        id: '87',
+        id: '8|1',
+        color: 'white',
+      },
+      {
+        id: '8|2',
         color: 'black',
       },
       {
-        id: '88',
+        id: '8|3',
         color: 'white',
       },
       {
-        id: '89',
+        id: '8|4',
         color: 'black',
       },
       {
-        id: '90',
+        id: '8|5',
         color: 'white',
       },
       {
-        id: '91',
+        id: '8|6',
         color: 'white',
       },
       {
-        id: '92',
+        id: '8|7',
         color: 'black',
       },
       {
-        id: '93',
+        id: '8|8',
         color: 'white',
       },
       {
-        id: '94',
-        color: 'white',
-      },
-      {
-        id: '95',
-        color: 'white',
-      },
-      {
-        id: '96',
-        color: 'white',
-      },
-      {
-        id: '97',
-        color: 'white',
-      },
-      {
-        id: '98',
-        color: 'white',
-      },
-      {
-        id: '99',
+        id: '8|9',
         color: 'black',
       },
       {
-        id: '010',
+        id: '8|10',
         color: 'white',
       },
       {
-        id: '011',
+        id: '8|11',
         color: 'white',
       },
       {
-        id: '110',
+        id: '9|0',
         color: 'white',
       },
       {
-        id: '111',
+        id: '9|1',
         color: 'white',
       },
       {
-        id: '210',
-        color: 'white',
-      },
-      {
-        id: '211',
-        color: 'white',
-      },
-      {
-        id: '310',
+        id: '9|2',
         color: 'black',
       },
       {
-        id: '311',
+        id: '9|3',
         color: 'white',
       },
       {
-        id: '410',
+        id: '9|4',
+        color: 'white',
+      },
+      {
+        id: '9|5',
+        color: 'white',
+      },
+      {
+        id: '9|6',
+        color: 'white',
+      },
+      {
+        id: '9|7',
+        color: 'white',
+      },
+      {
+        id: '9|8',
+        color: 'white',
+      },
+      {
+        id: '9|9',
         color: 'black',
       },
       {
-        id: '411',
+        id: '9|10',
         color: 'white',
       },
       {
-        id: '510',
+        id: '9|11',
+        color: 'white',
+      },
+      {
+        id: '10|0',
+        color: 'white',
+      },
+      {
+        id: '10|1',
+        color: 'white',
+      },
+      {
+        id: '10|2',
         color: 'black',
       },
       {
-        id: '511',
-        color: 'white',
-      },
-      {
-        id: '610',
+        id: '10|3',
         color: 'black',
       },
       {
-        id: '611',
-        color: 'white',
-      },
-      {
-        id: '710',
+        id: '10|4',
         color: 'black',
       },
       {
-        id: '711',
-        color: 'white',
-      },
-      {
-        id: '810',
-        color: 'white',
-      },
-      {
-        id: '811',
-        color: 'white',
-      },
-      {
-        id: '910',
-        color: 'white',
-      },
-      {
-        id: '911',
-        color: 'white',
-      },
-      {
-        id: '100',
-        color: 'white',
-      },
-      {
-        id: '101',
-        color: 'white',
-      },
-      {
-        id: '102',
+        id: '10|5',
         color: 'black',
       },
       {
-        id: '103',
+        id: '10|6',
         color: 'black',
       },
       {
-        id: '104',
+        id: '10|7',
         color: 'black',
       },
       {
-        id: '105',
+        id: '10|8',
         color: 'black',
       },
       {
-        id: '106',
+        id: '10|9',
         color: 'black',
       },
       {
-        id: '107',
-        color: 'black',
-      },
-      {
-        id: '108',
-        color: 'black',
-      },
-      {
-        id: '109',
-        color: 'black',
-      },
-      {
-        id: '1010',
+        id: '10|10',
         color: 'white',
       },
       {
-        id: '1011',
+        id: '10|11',
         color: 'white',
       },
       {
-        id: '112',
+        id: '11|0',
         color: 'white',
       },
       {
-        id: '113',
+        id: '11|1',
         color: 'white',
       },
       {
-        id: '114',
+        id: '11|2',
         color: 'white',
       },
       {
-        id: '115',
+        id: '11|3',
         color: 'white',
       },
       {
-        id: '116',
+        id: '11|4',
         color: 'white',
       },
       {
-        id: '117',
+        id: '11|5',
         color: 'white',
       },
       {
-        id: '118',
+        id: '11|6',
         color: 'white',
       },
       {
-        id: '119',
+        id: '11|7',
         color: 'white',
       },
       {
-        id: '1110',
+        id: '11|8',
         color: 'white',
       },
       {
-        id: '1111',
+        id: '11|9',
+        color: 'white',
+      },
+      {
+        id: '11|10',
+        color: 'white',
+      },
+      {
+        id: '11|11',
         color: 'white',
       },
     ],
@@ -2220,1003 +2228,1027 @@ const draws = [
     screen: 'desktop',
     draw: [
       {
-        id: '00',
+        id: '0|0',
         color: 'white',
       },
       {
-        id: '01',
+        id: '0|1',
         color: 'white',
       },
       {
-        id: '02',
+        id: '0|2',
         color: 'white',
       },
       {
-        id: '03',
+        id: '0|3',
         color: 'white',
       },
       {
-        id: '04',
+        id: '0|4',
         color: 'white',
       },
       {
-        id: '05',
+        id: '0|5',
         color: 'white',
       },
       {
-        id: '06',
+        id: '0|6',
         color: 'white',
       },
       {
-        id: '07',
+        id: '0|7',
         color: 'white',
       },
       {
-        id: '08',
+        id: '0|8',
         color: 'white',
       },
       {
-        id: '09',
+        id: '0|9',
         color: 'white',
       },
       {
-        id: '10',
+        id: '0|10',
         color: 'white',
       },
       {
-        id: '11',
+        id: '0|11',
         color: 'white',
       },
       {
-        id: '12',
+        id: '0|12',
         color: 'white',
       },
       {
-        id: '13',
+        id: '0|13',
         color: 'white',
       },
       {
-        id: '14',
+        id: '0|14',
         color: 'white',
       },
       {
-        id: '15',
+        id: '0|15',
         color: 'white',
       },
       {
-        id: '16',
+        id: '1|0',
         color: 'white',
       },
       {
-        id: '17',
+        id: '1|1',
+        color: 'white',
+      },
+      {
+        id: '1|2',
+        color: 'white',
+      },
+      {
+        id: '1|3',
+        color: 'white',
+      },
+      {
+        id: '1|4',
+        color: 'white',
+      },
+      {
+        id: '1|5',
+        color: 'white',
+      },
+      {
+        id: '1|6',
+        color: 'white',
+      },
+      {
+        id: '1|7',
         color: 'black',
       },
       {
-        id: '18',
+        id: '1|8',
         color: 'black',
       },
       {
-        id: '19',
+        id: '1|9',
         color: 'white',
       },
       {
-        id: '20',
+        id: '1|10',
         color: 'white',
       },
       {
-        id: '21',
+        id: '1|11',
         color: 'white',
       },
       {
-        id: '22',
+        id: '1|12',
         color: 'white',
       },
       {
-        id: '23',
+        id: '1|13',
         color: 'white',
       },
       {
-        id: '24',
+        id: '1|14',
         color: 'white',
       },
       {
-        id: '25',
+        id: '1|15',
         color: 'white',
       },
       {
-        id: '26',
+        id: '2|0',
+        color: 'white',
+      },
+      {
+        id: '2|1',
+        color: 'white',
+      },
+      {
+        id: '2|2',
+        color: 'white',
+      },
+      {
+        id: '2|3',
+        color: 'white',
+      },
+      {
+        id: '2|4',
+        color: 'white',
+      },
+      {
+        id: '2|5',
+        color: 'white',
+      },
+      {
+        id: '2|6',
         color: 'black',
       },
       {
-        id: '27',
+        id: '2|7',
         color: 'yellow',
       },
       {
-        id: '28',
+        id: '2|8',
         color: 'yellow',
       },
       {
-        id: '29',
+        id: '2|9',
         color: 'black',
       },
       {
-        id: '30',
+        id: '2|10',
         color: 'white',
       },
       {
-        id: '31',
+        id: '2|11',
         color: 'white',
       },
       {
-        id: '32',
+        id: '2|12',
         color: 'white',
       },
       {
-        id: '33',
+        id: '2|13',
         color: 'white',
       },
       {
-        id: '34',
+        id: '2|14',
         color: 'white',
       },
       {
-        id: '35',
+        id: '2|15',
+        color: 'white',
+      },
+      {
+        id: '3|0',
+        color: 'white',
+      },
+      {
+        id: '3|1',
+        color: 'white',
+      },
+      {
+        id: '3|2',
+        color: 'white',
+      },
+      {
+        id: '3|3',
+        color: 'white',
+      },
+      {
+        id: '3|4',
+        color: 'white',
+      },
+      {
+        id: '3|5',
         color: 'black',
       },
       {
-        id: '36',
+        id: '3|6',
         color: 'yellow',
       },
       {
-        id: '37',
+        id: '3|7',
         color: 'yellow',
       },
       {
-        id: '38',
+        id: '3|8',
         color: 'yellow',
       },
       {
-        id: '39',
+        id: '3|9',
         color: 'yellow',
       },
       {
-        id: '40',
-        color: 'white',
-      },
-      {
-        id: '41',
+        id: '3|10',
         color: 'black',
       },
       {
-        id: '42',
+        id: '3|11',
+        color: 'white',
+      },
+      {
+        id: '3|12',
+        color: 'white',
+      },
+      {
+        id: '3|13',
+        color: 'white',
+      },
+      {
+        id: '3|14',
+        color: 'white',
+      },
+      {
+        id: '3|15',
+        color: 'white',
+      },
+      {
+        id: '4|0',
+        color: 'white',
+      },
+      {
+        id: '4|1',
         color: 'black',
       },
       {
-        id: '43',
+        id: '4|2',
         color: 'black',
       },
       {
-        id: '44',
+        id: '4|3',
         color: 'black',
       },
       {
-        id: '45',
-        color: 'yellow',
-      },
-      {
-        id: '46',
-        color: 'yellow',
-      },
-      {
-        id: '47',
-        color: 'yellow',
-      },
-      {
-        id: '48',
-        color: 'yellow',
-      },
-      {
-        id: '49',
-        color: 'yellow',
-      },
-      {
-        id: '50',
-        color: 'white',
-      },
-      {
-        id: '51',
+        id: '4|4',
         color: 'black',
       },
       {
-        id: '52',
+        id: '4|5',
         color: 'yellow',
       },
       {
-        id: '53',
+        id: '4|6',
         color: 'yellow',
       },
       {
-        id: '54',
+        id: '4|7',
         color: 'yellow',
       },
       {
-        id: '55',
+        id: '4|8',
         color: 'yellow',
       },
       {
-        id: '56',
+        id: '4|9',
+        color: 'yellow',
+      },
+      {
+        id: '4|10',
+        color: 'yellow',
+      },
+      {
+        id: '4|11',
         color: 'black',
       },
       {
-        id: '57',
-        color: 'yellow',
-      },
-      {
-        id: '58',
-        color: 'yellow',
-      },
-      {
-        id: '59',
+        id: '4|12',
         color: 'black',
       },
       {
-        id: '60',
-        color: 'white',
-      },
-      {
-        id: '61',
-        color: 'white',
-      },
-      {
-        id: '62',
+        id: '4|13',
         color: 'black',
       },
       {
-        id: '63',
-        color: 'yellow',
-      },
-      {
-        id: '64',
-        color: 'yellow',
-      },
-      {
-        id: '65',
-        color: 'yellow',
-      },
-      {
-        id: '66',
+        id: '4|14',
         color: 'black',
       },
       {
-        id: '67',
-        color: 'yellow',
+        id: '4|15',
+        color: 'white',
       },
       {
-        id: '68',
-        color: 'yellow',
+        id: '5|0',
+        color: 'white',
       },
       {
-        id: '69',
+        id: '5|1',
         color: 'black',
       },
       {
-        id: '70',
-        color: 'white',
+        id: '5|2',
+        color: 'yellow',
       },
       {
-        id: '71',
-        color: 'white',
+        id: '5|3',
+        color: 'yellow',
       },
       {
-        id: '72',
-        color: 'white',
+        id: '5|4',
+        color: 'yellow',
       },
       {
-        id: '73',
+        id: '5|5',
+        color: 'yellow',
+      },
+      {
+        id: '5|6',
         color: 'black',
       },
       {
-        id: '74',
+        id: '5|7',
         color: 'yellow',
       },
       {
-        id: '75',
+        id: '5|8',
         color: 'yellow',
       },
       {
-        id: '76',
+        id: '5|9',
         color: 'black',
       },
       {
-        id: '77',
+        id: '5|10',
         color: 'yellow',
       },
       {
-        id: '78',
+        id: '5|11',
         color: 'yellow',
       },
       {
-        id: '79',
+        id: '5|12',
+        color: 'yellow',
+      },
+      {
+        id: '5|13',
+        color: 'yellow',
+      },
+      {
+        id: '5|14',
         color: 'black',
       },
       {
-        id: '80',
+        id: '5|15',
         color: 'white',
       },
       {
-        id: '81',
+        id: '6|0',
         color: 'white',
       },
       {
-        id: '82',
+        id: '6|1',
         color: 'white',
       },
       {
-        id: '83',
-        color: 'white',
-      },
-      {
-        id: '84',
+        id: '6|2',
         color: 'black',
       },
       {
-        id: '85',
+        id: '6|3',
         color: 'yellow',
       },
       {
-        id: '86',
+        id: '6|4',
         color: 'yellow',
       },
       {
-        id: '87',
+        id: '6|5',
         color: 'yellow',
       },
       {
-        id: '88',
-        color: 'yellow',
-      },
-      {
-        id: '89',
-        color: 'yellow',
-      },
-      {
-        id: '90',
-        color: 'white',
-      },
-      {
-        id: '91',
-        color: 'white',
-      },
-      {
-        id: '92',
-        color: 'white',
-      },
-      {
-        id: '93',
+        id: '6|6',
         color: 'black',
       },
       {
-        id: '94',
+        id: '6|7',
         color: 'yellow',
       },
       {
-        id: '95',
+        id: '6|8',
         color: 'yellow',
       },
       {
-        id: '96',
-        color: 'yellow',
-      },
-      {
-        id: '97',
-        color: 'yellow',
-      },
-      {
-        id: '98',
-        color: 'yellow',
-      },
-      {
-        id: '99',
-        color: 'yellow',
-      },
-      {
-        id: '010',
-        color: 'white',
-      },
-      {
-        id: '011',
-        color: 'white',
-      },
-      {
-        id: '110',
-        color: 'white',
-      },
-      {
-        id: '111',
-        color: 'white',
-      },
-      {
-        id: '210',
-        color: 'white',
-      },
-      {
-        id: '211',
-        color: 'white',
-      },
-      {
-        id: '310',
+        id: '6|9',
         color: 'black',
       },
       {
-        id: '311',
-        color: 'white',
-      },
-      {
-        id: '410',
+        id: '6|10',
         color: 'yellow',
       },
       {
-        id: '411',
+        id: '6|11',
+        color: 'yellow',
+      },
+      {
+        id: '6|12',
+        color: 'yellow',
+      },
+      {
+        id: '6|13',
         color: 'black',
       },
       {
-        id: '510',
-        color: 'yellow',
+        id: '6|14',
+        color: 'white',
       },
       {
-        id: '511',
-        color: 'yellow',
+        id: '6|15',
+        color: 'white',
       },
       {
-        id: '610',
-        color: 'yellow',
+        id: '7|0',
+        color: 'white',
       },
       {
-        id: '611',
-        color: 'yellow',
+        id: '7|1',
+        color: 'white',
       },
       {
-        id: '710',
-        color: 'yellow',
+        id: '7|2',
+        color: 'white',
       },
       {
-        id: '711',
-        color: 'yellow',
-      },
-      {
-        id: '810',
-        color: 'yellow',
-      },
-      {
-        id: '811',
+        id: '7|3',
         color: 'black',
       },
       {
-        id: '910',
+        id: '7|4',
         color: 'yellow',
       },
       {
-        id: '911',
+        id: '7|5',
         color: 'yellow',
       },
       {
-        id: '100',
-        color: 'white',
-      },
-      {
-        id: '101',
-        color: 'white',
-      },
-      {
-        id: '102',
-        color: 'white',
-      },
-      {
-        id: '103',
+        id: '7|6',
         color: 'black',
       },
       {
-        id: '104',
+        id: '7|7',
         color: 'yellow',
       },
       {
-        id: '105',
+        id: '7|8',
         color: 'yellow',
       },
       {
-        id: '106',
+        id: '7|9',
+        color: 'black',
+      },
+      {
+        id: '7|10',
         color: 'yellow',
       },
       {
-        id: '107',
+        id: '7|11',
         color: 'yellow',
       },
       {
-        id: '108',
+        id: '7|12',
+        color: 'black',
+      },
+      {
+        id: '7|13',
+        color: 'white',
+      },
+      {
+        id: '7|14',
+        color: 'white',
+      },
+      {
+        id: '7|15',
+        color: 'white',
+      },
+      {
+        id: '8|0',
+        color: 'white',
+      },
+      {
+        id: '8|1',
+        color: 'white',
+      },
+      {
+        id: '8|2',
+        color: 'white',
+      },
+      {
+        id: '8|3',
+        color: 'white',
+      },
+      {
+        id: '8|4',
+        color: 'black',
+      },
+      {
+        id: '8|5',
         color: 'yellow',
       },
       {
-        id: '109',
+        id: '8|6',
         color: 'yellow',
       },
       {
-        id: '1010',
+        id: '8|7',
         color: 'yellow',
       },
       {
-        id: '1011',
+        id: '8|8',
         color: 'yellow',
       },
       {
-        id: '112',
-        color: 'black',
-      },
-      {
-        id: '113',
+        id: '8|9',
         color: 'yellow',
       },
       {
-        id: '114',
+        id: '8|10',
         color: 'yellow',
       },
       {
-        id: '115',
+        id: '8|11',
+        color: 'black',
+      },
+      {
+        id: '8|12',
+        color: 'white',
+      },
+      {
+        id: '8|13',
+        color: 'white',
+      },
+      {
+        id: '8|14',
+        color: 'white',
+      },
+      {
+        id: '8|15',
+        color: 'white',
+      },
+      {
+        id: '9|0',
+        color: 'white',
+      },
+      {
+        id: '9|1',
+        color: 'white',
+      },
+      {
+        id: '9|2',
+        color: 'white',
+      },
+      {
+        id: '9|3',
+        color: 'black',
+      },
+      {
+        id: '9|4',
         color: 'yellow',
       },
       {
-        id: '116',
+        id: '9|5',
         color: 'yellow',
       },
       {
-        id: '117',
-        color: 'black',
-      },
-      {
-        id: '118',
-        color: 'black',
-      },
-      {
-        id: '119',
+        id: '9|6',
         color: 'yellow',
       },
       {
-        id: '1110',
+        id: '9|7',
         color: 'yellow',
       },
       {
-        id: '1111',
+        id: '9|8',
         color: 'yellow',
       },
       {
-        id: '012',
-        color: 'white',
-      },
-      {
-        id: '013',
-        color: 'white',
-      },
-      {
-        id: '014',
-        color: 'white',
-      },
-      {
-        id: '015',
-        color: 'white',
-      },
-      {
-        id: '212',
-        color: 'white',
-      },
-      {
-        id: '213',
-        color: 'white',
-      },
-      {
-        id: '214',
-        color: 'white',
-      },
-      {
-        id: '215',
-        color: 'white',
-      },
-      {
-        id: '312',
-        color: 'white',
-      },
-      {
-        id: '313',
-        color: 'white',
-      },
-      {
-        id: '314',
-        color: 'white',
-      },
-      {
-        id: '315',
-        color: 'white',
-      },
-      {
-        id: '412',
-        color: 'black',
-      },
-      {
-        id: '413',
-        color: 'black',
-      },
-      {
-        id: '414',
-        color: 'black',
-      },
-      {
-        id: '415',
-        color: 'white',
-      },
-      {
-        id: '512',
+        id: '9|9',
         color: 'yellow',
       },
       {
-        id: '513',
+        id: '9|10',
         color: 'yellow',
       },
       {
-        id: '514',
-        color: 'black',
-      },
-      {
-        id: '515',
-        color: 'white',
-      },
-      {
-        id: '612',
+        id: '9|11',
         color: 'yellow',
       },
       {
-        id: '613',
+        id: '9|12',
         color: 'black',
       },
       {
-        id: '614',
+        id: '9|13',
         color: 'white',
       },
       {
-        id: '615',
+        id: '9|14',
         color: 'white',
       },
       {
-        id: '712',
+        id: '9|15',
+        color: 'white',
+      },
+      {
+        id: '10|0',
+        color: 'white',
+      },
+      {
+        id: '10|1',
+        color: 'white',
+      },
+      {
+        id: '10|2',
+        color: 'white',
+      },
+      {
+        id: '10|3',
         color: 'black',
       },
       {
-        id: '713',
-        color: 'white',
-      },
-      {
-        id: '714',
-        color: 'white',
-      },
-      {
-        id: '715',
-        color: 'white',
-      },
-      {
-        id: '812',
-        color: 'white',
-      },
-      {
-        id: '813',
-        color: 'white',
-      },
-      {
-        id: '814',
-        color: 'white',
-      },
-      {
-        id: '815',
-        color: 'white',
-      },
-      {
-        id: '912',
-        color: 'black',
-      },
-      {
-        id: '913',
-        color: 'white',
-      },
-      {
-        id: '914',
-        color: 'white',
-      },
-      {
-        id: '915',
-        color: 'white',
-      },
-      {
-        id: '1012',
-        color: 'black',
-      },
-      {
-        id: '1013',
-        color: 'white',
-      },
-      {
-        id: '1014',
-        color: 'white',
-      },
-      {
-        id: '1015',
-        color: 'white',
-      },
-      {
-        id: '1112',
+        id: '10|4',
         color: 'yellow',
       },
       {
-        id: '1113',
-        color: 'black',
-      },
-      {
-        id: '1114',
-        color: 'white',
-      },
-      {
-        id: '1115',
-        color: 'white',
-      },
-      {
-        id: '120',
-        color: 'white',
-      },
-      {
-        id: '121',
-        color: 'white',
-      },
-      {
-        id: '122',
-        color: 'black',
-      },
-      {
-        id: '123',
+        id: '10|5',
         color: 'yellow',
       },
       {
-        id: '124',
+        id: '10|6',
         color: 'yellow',
       },
       {
-        id: '125',
-        color: 'black',
-      },
-      {
-        id: '126',
-        color: 'black',
-      },
-      {
-        id: '127',
-        color: 'white',
-      },
-      {
-        id: '128',
-        color: 'white',
-      },
-      {
-        id: '129',
-        color: 'black',
-      },
-      {
-        id: '1210',
-        color: 'black',
-      },
-      {
-        id: '1211',
+        id: '10|7',
         color: 'yellow',
       },
       {
-        id: '1212',
+        id: '10|8',
         color: 'yellow',
       },
       {
-        id: '1213',
-        color: 'black',
-      },
-      {
-        id: '1214',
-        color: 'white',
-      },
-      {
-        id: '1215',
-        color: 'white',
-      },
-      {
-        id: '130',
-        color: 'white',
-      },
-      {
-        id: '131',
-        color: 'black',
-      },
-      {
-        id: '132',
+        id: '10|9',
         color: 'yellow',
       },
       {
-        id: '133',
+        id: '10|10',
         color: 'yellow',
       },
       {
-        id: '134',
-        color: 'black',
-      },
-      {
-        id: '135',
-        color: 'white',
-      },
-      {
-        id: '136',
-        color: 'white',
-      },
-      {
-        id: '137',
-        color: 'white',
-      },
-      {
-        id: '138',
-        color: 'white',
-      },
-      {
-        id: '139',
-        color: 'white',
-      },
-      {
-        id: '1310',
-        color: 'white',
-      },
-      {
-        id: '1311',
-        color: 'black',
-      },
-      {
-        id: '1312',
+        id: '10|11',
         color: 'yellow',
       },
       {
-        id: '1313',
+        id: '10|12',
+        color: 'black',
+      },
+      {
+        id: '10|13',
+        color: 'white',
+      },
+      {
+        id: '10|14',
+        color: 'white',
+      },
+      {
+        id: '10|15',
+        color: 'white',
+      },
+      {
+        id: '11|0',
+        color: 'white',
+      },
+      {
+        id: '11|1',
+        color: 'white',
+      },
+      {
+        id: '11|2',
+        color: 'black',
+      },
+      {
+        id: '11|3',
         color: 'yellow',
       },
       {
-        id: '1314',
+        id: '11|4',
+        color: 'yellow',
+      },
+      {
+        id: '11|5',
+        color: 'yellow',
+      },
+      {
+        id: '11|6',
+        color: 'yellow',
+      },
+      {
+        id: '11|7',
+        color: 'yellow',
+      },
+      {
+        id: '11|8',
+        color: 'yellow',
+      },
+      {
+        id: '11|9',
+        color: 'yellow',
+      },
+      {
+        id: '11|10',
+        color: 'yellow',
+      },
+      {
+        id: '11|11',
+        color: 'yellow',
+      },
+      {
+        id: '11|12',
+        color: 'yellow',
+      },
+      {
+        id: '11|13',
         color: 'black',
       },
       {
-        id: '1315',
+        id: '11|14',
         color: 'white',
       },
       {
-        id: '140',
+        id: '11|15',
         color: 'white',
       },
       {
-        id: '141',
+        id: '12|0',
+        color: 'white',
+      },
+      {
+        id: '12|1',
+        color: 'white',
+      },
+      {
+        id: '12|2',
         color: 'black',
       },
       {
-        id: '142',
+        id: '12|3',
+        color: 'yellow',
+      },
+      {
+        id: '12|4',
+        color: 'yellow',
+      },
+      {
+        id: '12|5',
+        color: 'yellow',
+      },
+      {
+        id: '12|6',
+        color: 'yellow',
+      },
+      {
+        id: '12|7',
         color: 'black',
       },
       {
-        id: '143',
+        id: '12|8',
         color: 'black',
       },
       {
-        id: '144',
-        color: 'white',
+        id: '12|9',
+        color: 'yellow',
       },
       {
-        id: '145',
-        color: 'white',
+        id: '12|10',
+        color: 'yellow',
       },
       {
-        id: '146',
-        color: 'white',
+        id: '12|11',
+        color: 'yellow',
       },
       {
-        id: '147',
-        color: 'white',
+        id: '12|12',
+        color: 'yellow',
       },
       {
-        id: '148',
-        color: 'white',
-      },
-      {
-        id: '149',
-        color: 'white',
-      },
-      {
-        id: '1410',
-        color: 'white',
-      },
-      {
-        id: '1411',
-        color: 'white',
-      },
-      {
-        id: '1412',
+        id: '12|13',
         color: 'black',
       },
       {
-        id: '1413',
+        id: '12|14',
+        color: 'white',
+      },
+      {
+        id: '12|15',
+        color: 'white',
+      },
+      {
+        id: '13|0',
+        color: 'white',
+      },
+      {
+        id: '13|1',
         color: 'black',
       },
       {
-        id: '1414',
+        id: '13|2',
+        color: 'yellow',
+      },
+      {
+        id: '13|3',
+        color: 'yellow',
+      },
+      {
+        id: '13|4',
+        color: 'yellow',
+      },
+      {
+        id: '13|5',
         color: 'black',
       },
       {
-        id: '1415',
+        id: '13|6',
+        color: 'black',
+      },
+      {
+        id: '13|7',
         color: 'white',
       },
       {
-        id: '150',
+        id: '13|8',
         color: 'white',
       },
       {
-        id: '151',
+        id: '13|9',
+        color: 'black',
+      },
+      {
+        id: '13|10',
+        color: 'black',
+      },
+      {
+        id: '13|11',
+        color: 'yellow',
+      },
+      {
+        id: '13|12',
+        color: 'yellow',
+      },
+      {
+        id: '13|13',
+        color: 'yellow',
+      },
+      {
+        id: '13|14',
+        color: 'black',
+      },
+      {
+        id: '13|15',
         color: 'white',
       },
       {
-        id: '152',
+        id: '14|0',
         color: 'white',
       },
       {
-        id: '153',
+        id: '14|1',
+        color: 'black',
+      },
+      {
+        id: '14|2',
+        color: 'black',
+      },
+      {
+        id: '14|3',
+        color: 'black',
+      },
+      {
+        id: '14|4',
+        color: 'black',
+      },
+      {
+        id: '14|5',
         color: 'white',
       },
       {
-        id: '154',
+        id: '14|6',
         color: 'white',
       },
       {
-        id: '155',
+        id: '14|7',
         color: 'white',
       },
       {
-        id: '156',
+        id: '14|8',
         color: 'white',
       },
       {
-        id: '157',
+        id: '14|9',
         color: 'white',
       },
       {
-        id: '158',
+        id: '14|10',
         color: 'white',
       },
       {
-        id: '159',
+        id: '14|11',
+        color: 'black',
+      },
+      {
+        id: '14|12',
+        color: 'black',
+      },
+      {
+        id: '14|13',
+        color: 'black',
+      },
+      {
+        id: '14|14',
+        color: 'black',
+      },
+      {
+        id: '14|15',
         color: 'white',
       },
       {
-        id: '1510',
+        id: '15|0',
         color: 'white',
       },
       {
-        id: '1511',
+        id: '15|1',
         color: 'white',
       },
       {
-        id: '1512',
+        id: '15|2',
         color: 'white',
       },
       {
-        id: '1513',
+        id: '15|3',
         color: 'white',
       },
       {
-        id: '1514',
+        id: '15|4',
         color: 'white',
       },
       {
-        id: '1515',
+        id: '15|5',
+        color: 'white',
+      },
+      {
+        id: '15|6',
+        color: 'white',
+      },
+      {
+        id: '15|7',
+        color: 'white',
+      },
+      {
+        id: '15|8',
+        color: 'white',
+      },
+      {
+        id: '15|9',
+        color: 'white',
+      },
+      {
+        id: '15|10',
+        color: 'white',
+      },
+      {
+        id: '15|11',
+        color: 'white',
+      },
+      {
+        id: '15|12',
+        color: 'white',
+      },
+      {
+        id: '15|13',
+        color: 'white',
+      },
+      {
+        id: '15|14',
+        color: 'white',
+      },
+      {
+        id: '15|15',
         color: 'white',
       },
     ],

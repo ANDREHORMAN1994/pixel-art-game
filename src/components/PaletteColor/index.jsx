@@ -31,7 +31,6 @@ function PaletteColor({
 
   const generateListColors = () => {
     const newArrayColors = palleteSize.slice(2).map(generateRandomColor);
-    console.log(newArrayColors);
     setPalleteSize(['white', 'black', ...newArrayColors]);
   };
 

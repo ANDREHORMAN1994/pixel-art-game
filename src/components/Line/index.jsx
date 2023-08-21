@@ -9,8 +9,8 @@ function Line({ idLine, boardSize, brushColor, stopTimer = false }) {
       {
         boardSize.map((color, index) => (
           <Pixel
-            key={ `${idLine}${index}` }
-            idPixel={ `${idLine}${index}` }
+            key={ `${idLine}|${index}` }
+            idPixel={ `${idLine}|${index}` }
             color={ color }
             brushColor={ brushColor }
             stopTimer={ stopTimer }

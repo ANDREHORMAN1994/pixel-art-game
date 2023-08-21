@@ -24,7 +24,6 @@ function Game() {
       ...state,
       brushColor: newColor,
     });
-    console.log(newColor);
   };
 
   const clearBoard = useCallback(() => {
