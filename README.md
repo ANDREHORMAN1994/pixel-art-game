@@ -1,50 +1,44 @@
-# PIXEL ART + REACT 🎨
+<h1 align="center">
+  <p>PIXEL ART GAME 🎨</p>
+  <p>React JS ⚛️ | Redux Toolkit 🧰 | Styled Components 💅 | Material UI 🎩</p>
+</h1>
 
-## FUNCIONALIDADES BABY STEPS 👶
+<p align="center">
+  <a href="#bookmark-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-rotas-da-aplicação">Rotas do App</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://pixel-art-game-andre-horman.vercel.app/" target="_blank">Aplicação na Vercel</a>
+</p>
 
-
-## ROTAS
- - Login ✅
- - Game ✅
-
-
-## TELA LOGIN
- - Campo de Nome ✅
- - Campo de Email ✅
- - Botão de Login ✅
- - Redirecionar para tela do jogo ✅
-
-
-## EXTRA TELA LOGIN
- - Desabilitar Botão 
- - Validar Campos 
- - Habilitar Botão 
+<p align="center">
+  <img alt="design do projeto" width="650px" src="./.github/mockup.png" />
+<p>
 
 
-## ESTRUTURA TELA DO LOGIN
- - Login.jsx
-    - Input.jsx
-    - Input.js
-    - Button.jsx
+## :bookmark: Sobre
+
+O **Pixel Art Game**  é um jogo desenvolvido para plataformas Desktop e Mobile que proporciona aos jogadores a experiência única de criar pinturas em estilo de 8 ou 16 bits. Agora, você pode elevar o desafio ao pintar quadros pixelados o mais rápido possível, com base em pinturas de referência, visando conquistar mais pontos. Sua pontuação será exibida na tela de classificação, incentivando a competição e o aprimoramento constante.
 
 
-## TELA DO PIXEL
-- Criar o Pixel ✅
-- Criar o Board ✅
-- Pintar o Pixel (cor preta) ✅
-- Gerar 04 Paletas de Cores (preto, vermelho, verde, azul) ✅
-- Selecionar a cor da Paleta ✅
-- Pintar o Pixel com a cor selecionada ✅
+## :computer: Rotas da aplicação
+ - Tela de Login ✅
+ - Tela de Menu ✅
+ - Tela de Desenho Livre ✅
+ - Tela de Desafios ✅
+ - Tela de Ranking ✅
 
 
-## ESTRUTURA TELA DO PIXEL
- - Game.jsx
-    - ColorPalette.jsx
-    - Line.jsx
-        - Pixel.jsx
+## :rocket: Tecnologias
 
+  - `React JS`
+  > Biblioteca JavaScript para construção de interfaces de usuário interativas e reativas em aplicações web.
+  - `Redux Toolkit`
+  > Toolkit é um conjunto de utilidades oficial do Redux para desenvolvimento mais eficiente de aplicações com gerenciamento de estado.
+  - `Styled Components`
+  > Biblioteca que permite escrever estilos CSS diretamente em componentes React.
+  - `Material UI`
+  > Biblioteca de componentes de interface de usuário para React, seguindo as diretrizes de design da Google.
+  - `Vercel`
+  > Plataforma de hospedagem voltada para aplicações web modernas e escaláveis.
 
-## BÔNUS (Dever de Casa)
-- Tamanho do Board dinâmico
-- Gerar Paleta de Cores aleatória
-- Botão de limpar o board
+---
