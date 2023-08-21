@@ -1,7 +1,10 @@
 <h1 align="center">
-  <p>PIXEL ART GAME 🎨</p>
-  <p>React JS | Redux Toolkit | MUI + Styled Components</p>
+  PIXEL ART GAME 🎨
 </h1>
+
+<h3 align="center">
+  React JS | Redux Toolkit | MUI + Styled Components
+</h3>
 
 <p align="center">
   <a href="#bookmark-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
