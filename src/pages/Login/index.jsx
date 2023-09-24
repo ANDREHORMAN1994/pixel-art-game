@@ -22,7 +22,7 @@ function Login() {
 
   useEffect(() => {
     const handleValidation = () => {
-      const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+      const emailRegex = /^[a-z0-9.\-_]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
       const valEmail = emailRegex.test(email);
       const valName = name.length > 0 && name.trim();
       setIsDisabled(!(valEmail && valName));
